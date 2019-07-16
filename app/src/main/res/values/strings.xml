@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HandNotepad</string>
+    <string name="clear">Καθάρισμα</string>
+    <string name="pen">Μολύβι</string>
+    <string name="eraser">Γόμα</string>
+    <string name="ok">ΟΚ</string>
+
+</resources>
