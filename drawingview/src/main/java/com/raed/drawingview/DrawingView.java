@@ -157,7 +157,7 @@ public class DrawingView extends View{
 //    }
 
     public void initializeDrawingFromBitmap(Bitmap bitmap) {
-        mDrawingBitmap = Bitmap.createBitmap(bitmap);
+        mDrawingBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
         mCanvas = new Canvas(mDrawingBitmap);
         int w = ((int) getWidthWithoutPadding());
         int h = ((int) getHeightWithoutPadding());
@@ -165,7 +165,8 @@ public class DrawingView extends View{
             mDrawingPerformer = new DrawingPerformer(mBrushes);
             mDrawingPerformer.setPaintPerformListener(new MyDrawingPerformerListener());
         }
-        mDrawingPerformer.setWidthAndHeight(w, h);
+        mDrawingPerformer.setWidthAndHeight(mDrawingBitmap.getWidth(), mDrawingBitmap.getHeight());
+        mCleared = false;
     }
 
 

@@ -33,19 +33,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/ActionStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/ActionStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingPerformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingPerformer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/Utilities.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +64,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="7" />
-          <entry key="java" value="33" />
+          <entry key="java" value="34" />
           <entry key="png" value="1" />
           <entry key="properties" value="1" />
           <entry key="xml" value="32" />
@@ -81,7 +74,7 @@
         <counts>
           <entry key="Groovy" value="7" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="33" />
+          <entry key="JAVA" value="34" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="32" />
         </counts>
@@ -90,14 +83,14 @@
         <counts>
           <entry key="dummy" value="1" />
           <entry key="gradle" value="2" />
-          <entry key="java" value="906" />
+          <entry key="java" value="939" />
           <entry key="xml" value="267" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="2" />
-          <entry key="JAVA" value="906" />
+          <entry key="JAVA" value="939" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="267" />
         </counts>
@@ -122,26 +115,29 @@
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="159" column="53" lean-forward="true" selection-start-line="159" selection-start-column="53" selection-end-line="159" selection-end-column="53" />
+            <state relative-caret-position="384">
+              <caret line="168" column="25" selection-start-line="168" selection-start-column="25" selection-end-line="168" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2910#2911#0" expanded="true" />
                 <element signature="e#2949#2950#0" expanded="true" />
                 <element signature="e#13514#13515#0" expanded="true" />
                 <element signature="e#13564#13565#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -234,11 +230,12 @@
       <find>storeBitmap</find>
       <find>REQUEST_CODE_IMPORT_IMAGE</find>
       <find>backgr</find>
-      <find>initializeDrawingBitmap</find>
       <find>mCanvas</find>
       <find>initializeDrawing</find>
       <find>Liste</find>
       <find>DrawingPerformerListener</find>
+      <find>initializeDrawingBitmap</find>
+      <find>clear</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/drawingview/src/main/java</dir>
@@ -895,18 +892,18 @@
       <window_info id="Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Build Variants" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.20021413" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.20021413" />
       <window_info id="Captures" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Logcat" order="0" weight="0.6238938" />
+      <window_info anchor="bottom" id="Logcat" order="0" weight="0.37278762" />
       <window_info anchor="bottom" id="TODO" order="1" sideWeight="0.49946466" weight="0.32964602" />
-      <window_info anchor="bottom" id="Debug" order="2" visible="true" weight="0.32853982" />
+      <window_info active="true" anchor="bottom" id="Debug" order="2" visible="true" weight="0.32853982" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32964602" />
       <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5005353" side_tool="true" weight="0.32964602" />
       <window_info anchor="bottom" id="Build" order="6" sideWeight="0.49946466" weight="0.22566372" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32964602" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.26216814" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.32190266" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Gradle" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -921,6 +918,18 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java</url>
+          <line>318</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/MainActivity.java">
@@ -1097,22 +1106,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1011#1168#0" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#1221#1388#0" expanded="true" />
-            <element signature="e#1387#1388#0" expanded="true" />
-            <element signature="e#1444#1614#0" expanded="true" />
-            <element signature="e#1613#1614#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/ActionStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1144,10 +1137,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="159" column="53" lean-forward="true" selection-start-line="159" selection-start-column="53" selection-end-line="159" selection-end-column="53" />
+        <state relative-caret-position="384">
+          <caret line="168" column="25" selection-start-line="168" selection-start-column="25" selection-end-line="168" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2910#2911#0" expanded="true" />
