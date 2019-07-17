@@ -38,6 +38,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/src/main/java/com/raed/drawingviewapp/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/sample/src/main/java/com/raed/drawingviewapp/MainActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,14 +83,14 @@
         <counts>
           <entry key="dummy" value="1" />
           <entry key="gradle" value="2" />
-          <entry key="java" value="379" />
+          <entry key="java" value="667" />
           <entry key="xml" value="267" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="2" />
-          <entry key="JAVA" value="379" />
+          <entry key="JAVA" value="667" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="267" />
         </counts>
@@ -123,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="79" column="68" selection-start-line="79" selection-start-column="68" selection-end-line="79" selection-end-column="68" />
+            <state relative-caret-position="167">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1011#1168#0" expanded="true" />
@@ -175,11 +176,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sample/src/main/java/com/raed/drawingviewapp/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="148" column="28" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="28" />
+            <state relative-caret-position="487">
+              <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -233,6 +234,7 @@
       <find>exportImage</find>
       <find>exportDrawing</find>
       <find>storeBitmap</find>
+      <find>REQUEST_CODE_IMPORT_IMAGE</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/drawingview/src/main/java</dir>
@@ -245,7 +247,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java" />
-        <option value="$PROJECT_DIR$/sample/src/main/java/com/raed/drawingviewapp/MainActivity.java" />
         <option value="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/brushes/Brushes.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
@@ -256,6 +257,7 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/MainActivity.java" />
+        <option value="$PROJECT_DIR$/sample/src/main/java/com/raed/drawingviewapp/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -472,7 +474,7 @@
     <property name="android.project.structure.last.selected" value="sample" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/dvpsoft/Android-SDK" />
-    <property name="device.picker.selection" value="Lenovo_A7-30_Tablet_API_19" />
+    <property name="device.picker.selection" value="IFER_Nexus_5X_API_27" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../DrawingView" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="options.searchVisible" value="true" />
@@ -823,6 +825,15 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1914" height="1051" extended-state="0" />
     <editor active="true" />
@@ -833,15 +844,15 @@
       <window_info id="Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Build Variants" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.20021413" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.20021413" />
       <window_info id="Captures" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Logcat" order="0" weight="0.29756638" />
-      <window_info anchor="bottom" id="TODO" order="1" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="0" visible="true" weight="0.29756638" />
+      <window_info anchor="bottom" id="TODO" order="1" sideWeight="0.49946466" weight="0.32964602" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.27876106" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32964602" />
       <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5005353" side_tool="true" visible="true" weight="0.22566372" />
-      <window_info anchor="bottom" id="Build" order="6" sideWeight="0.49946466" visible="true" weight="0.22566372" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5005353" side_tool="true" weight="0.32964602" />
+      <window_info anchor="bottom" id="Build" order="6" sideWeight="0.49946466" weight="0.22566372" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32964602" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Run" order="9" weight="0.21017699" />
@@ -1059,20 +1070,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample/src/main/java/com/raed/drawingviewapp/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="148" column="28" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="79" column="68" selection-start-line="79" selection-start-column="68" selection-end-line="79" selection-end-column="68" />
+        <state relative-caret-position="167">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1011#1168#0" expanded="true" />
@@ -1081,6 +1082,16 @@
             <element signature="e#1387#1388#0" expanded="true" />
             <element signature="e#1444#1614#0" expanded="true" />
             <element signature="e#1613#1614#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/src/main/java/com/raed/drawingviewapp/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

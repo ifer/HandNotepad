@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Environment;
@@ -22,6 +23,8 @@ import com.raed.drawingview.brushes.Brushes;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,6 +40,19 @@ public class MainActivity extends AppCompatActivity {
 
         mDrawingView = findViewById(R.id.drawing_view);
 
+        String b64text = null;
+        try {
+            b64text = loadBase64File();
+        }
+        catch (IOException e){
+            Log.d("DRAW", "base64 read error: " + e.getLocalizedMessage());
+        }
+        if (b64text != null && !(b64text.trim().length() == 0)){
+            byte[] decodedString = Base64.decode(b64text, Base64.DEFAULT);
+            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+            mDrawingView.setBackgroundImage(decodedByte);
+
+        }
 
 
         findViewById(R.id.clear).setOnClickListener(new View.OnClickListener() {
@@ -129,6 +145,19 @@ public class MainActivity extends AppCompatActivity {
 //                new String[]{"image/png"},
 //                null);
 //        sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(imageFile)));
+    }
+
+    private String loadBase64File ()  throws IOException {
+        File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+        folder.mkdirs();
+
+        RandomAccessFile file = new RandomAccessFile(new File(folder,   "note-01.b64"), "r");
+        byte[] arr = new byte[(int) file.length()];
+        file.readFully(arr);
+        String result = new String(arr);
+        file.close();
+Log.d("DRAW", "base64=" + result.substring(0, 99));
+        return result;
     }
 
     private String bitmapToBase64(Bitmap bitmap) {

@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
     private void setBrushSelected(int brushID){
         BrushSettings settings = mDrawingView.getBrushSettings();
         settings.setSelectedBrush(brushID);
-Log.d("DRAW", "setBrushSelected: " + String.valueOf(brushID));
+//Log.d("DRAW", "setBrushSelected: " + String.valueOf(brushID));
 
         int sizeInPercentage = (int) (settings.getSelectedBrushSize() * 100);
         mSizeSeekBar.setProgress(sizeInPercentage);
