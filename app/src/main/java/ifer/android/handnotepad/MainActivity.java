@@ -50,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
         if (b64text != null && !(b64text.trim().length() == 0)){
             byte[] decodedString = Base64.decode(b64text, Base64.DEFAULT);
             Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-            mDrawingView.setBackgroundImage(decodedByte);
+//            mDrawingView.setBackgroundImage(decodedByte);
+            mDrawingView.initializeDrawingFromBitmap(decodedByte);
 
         }
 

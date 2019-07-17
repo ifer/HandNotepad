@@ -7,9 +7,9 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 
-class Utilities {
+public class Utilities {
 
-    static Bitmap createBlackWhiteBackground(int w, int h, int squareSize){
+    public static Bitmap createBlackWhiteBackground(int w, int h, int squareSize){
         Bitmap bitmap = Bitmap.createBitmap( w, h, Bitmap.Config.RGB_565);
         Canvas canvas = new Canvas(bitmap);
         Paint paint = new Paint(Paint.DITHER_FLAG);
@@ -26,7 +26,7 @@ class Utilities {
         return bitmap;
     }
 
-    static void cubicBezier(
+    public static void cubicBezier(
             float x0, float y0,
             float x1, float y1,
             float x2, float y2,
@@ -45,13 +45,13 @@ class Utilities {
                 t * t * t * y3);
     }
 
-    static float dist(float x1, float y1, float x2, float y2) {
+    public static float dist(float x1, float y1, float x2, float y2) {
         x2-=x1;
         y2-=y1;
         return (float) Math.sqrt(x2*x2 + y2*y2);
     }
 
-    static Bitmap resizeBitmap(Bitmap bm, int newWidth, int newHeight) {
+    public static Bitmap resizeBitmap(Bitmap bm, int newWidth, int newHeight) {
         if (bm == null)
             return null;
         int width = bm.getWidth();

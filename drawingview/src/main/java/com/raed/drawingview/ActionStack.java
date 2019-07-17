@@ -7,7 +7,7 @@ import java.util.List;
 /*
 This is used for undo and redo operations.
  */
-class ActionStack {
+public class ActionStack {
 
     private static final String TAG = "ActionStack";
     private static final long mMaxSize = Runtime.getRuntime().maxMemory() / 4;
@@ -17,7 +17,7 @@ class ActionStack {
     private List<DrawingAction> mRedoStack = new ArrayList<>();
 
 
-    void addAction(DrawingAction action) {
+    public void addAction(DrawingAction action) {
         Log.d(TAG, "Add getAction: " + action);
         if (mRedoStack.size() > 0){ //Clear the redo stack
             for (DrawingAction s:mRedoStack)
@@ -27,29 +27,29 @@ class ActionStack {
         addActionToStack(mUndoStack, action);
     }
 
-    void addActionToRedoStack(DrawingAction action){
+    public void addActionToRedoStack(DrawingAction action){
         Log.d(TAG, "Add getAction to redo stack: " + action);
         addActionToStack(mRedoStack, action);
     }
 
-    void addActionToUndoStack(DrawingAction action){
+    public void addActionToUndoStack(DrawingAction action){
         Log.d(TAG, "Add getAction to undo stack: " + action);
         addActionToStack(mUndoStack, action);
     }
 
-    DrawingAction previous() {
+    public DrawingAction previous() {
         return freeLastItem(mUndoStack);
     }
 
-    DrawingAction next() {
+    public DrawingAction next() {
         return freeLastItem(mRedoStack);
     }
 
-    boolean isRedoStackEmpty(){
+    public boolean isRedoStackEmpty(){
         return mRedoStack.size() == 0;
     }
 
-    boolean isUndoStackEmpty(){
+    public boolean isUndoStackEmpty(){
         return mUndoStack.size() == 0;
     }
 

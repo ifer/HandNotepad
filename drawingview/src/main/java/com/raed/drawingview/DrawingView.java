@@ -17,6 +17,12 @@ import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
 
+
+import com.raed.drawingview.ActionStack;
+import com.raed.drawingview.DrawingAction;
+import com.raed.drawingview.DrawingPerformer;
+import com.raed.drawingview.R;
+import com.raed.drawingview.Utilities;
 import com.raed.drawingview.brushes.BrushSettings;
 import com.raed.drawingview.brushes.Brushes;
 
@@ -41,9 +47,9 @@ public class DrawingView extends View{
     private float mLastX[] = new float[2];
     private float mLastY[] = new float[2];
 
-    private ActionStack mActionStack;//This is used for undo/redo, if null this means the undo and redo are disabled
+    public ActionStack mActionStack;//This is used for undo/redo, if null this means the undo and redo are disabled
 
-    private DrawingPerformer mDrawingPerformer;//
+    public DrawingPerformer mDrawingPerformer;//
 
     private OnDrawListener mOnDrawListener;
 
@@ -142,6 +148,26 @@ public class DrawingView extends View{
         else
             canvas.drawBitmap(mDrawingBitmap,0, 0, null);
     }
+
+    //ifer
+//    public void setImageOnCanvas (Bitmap bitmap){
+//        mBGBitmap = bitmap;
+//        mCanvas.drawBitmap(mBGBitmap, 0, 0, null);
+//        invalidate();
+//    }
+
+    public void initializeDrawingFromBitmap(Bitmap bitmap) {
+        mDrawingBitmap = Bitmap.createBitmap(bitmap);
+        mCanvas = new Canvas(mDrawingBitmap);
+        int w = ((int) getWidthWithoutPadding());
+        int h = ((int) getHeightWithoutPadding());
+        if (mDrawingPerformer == null){
+            mDrawingPerformer = new DrawingPerformer(mBrushes);
+            mDrawingPerformer.setPaintPerformListener(new MyDrawingPerformerListener());
+        }
+        mDrawingPerformer.setWidthAndHeight(w, h);
+    }
+
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {

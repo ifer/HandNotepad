@@ -17,17 +17,17 @@ import com.raed.drawingview.brushes.androidpathbrushes.PathBrushRenderer;
 import com.raed.drawingview.brushes.stampbrushes.StampBrush;
 import com.raed.drawingview.brushes.stampbrushes.StampBrushRenderer;
 
-class DrawingPerformer {
+public class DrawingPerformer {
 
     private static final String TAG = "DrawingPerformer";
     private BrushRenderer mCurrentBrushRenderer;
 
-    interface DrawingPerformerListener{
+    public interface DrawingPerformerListener{
         void onDrawingPerformed(Path path, Paint paint, Rect rect);
         void onDrawingPerformed(Bitmap bitmap, Rect rect);
     }
 
-    private DrawingPerformerListener mDrawingPerformerListener;
+    public DrawingPerformerListener mDrawingPerformerListener;
 
     private Bitmap mBitmap;//this is used for the eraser
     private Canvas mCanvas;
@@ -54,7 +54,7 @@ class DrawingPerformer {
         
     }
 
-    void draw(Canvas canvas,  Bitmap bitmap) {
+    public void draw(Canvas canvas,  Bitmap bitmap) {
         if (mSelectedBrush.getClass().equals(Eraser.class)){
             mCanvas.drawColor(0, PorterDuff.Mode.CLEAR);
             mCanvas.drawBitmap(bitmap, 0, 0, null);
@@ -67,7 +67,7 @@ class DrawingPerformer {
     }
 
     private DrawingEvent mTemDrawingEvent = new DrawingEvent();
-    void onTouch(MotionEvent event) {
+    public void onTouch(MotionEvent event) {
         int action = event.getActionMasked();
         if (action == MotionEvent.ACTION_CANCEL)
             action = MotionEvent.ACTION_UP;
@@ -102,15 +102,15 @@ class DrawingPerformer {
         }
     }
 
-    void setPaintPerformListener(DrawingPerformerListener listener) {
+    public void setPaintPerformListener(DrawingPerformerListener listener) {
         mDrawingPerformerListener = listener;
     }
 
-    boolean isDrawing() {
+    public boolean isDrawing() {
         return mDrawing;
     }
 
-    void setWidthAndHeight(int width, int height){
+    public void setWidthAndHeight(int width, int height){
         mBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
         mCanvas = new Canvas(mBitmap);
 

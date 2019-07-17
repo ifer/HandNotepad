@@ -4,18 +4,18 @@ import android.graphics.Bitmap;
 import android.graphics.Rect;
 
 
-class DrawingAction {
+public class DrawingAction {
 
-    Bitmap mBitmap;
-    Rect mRect;
+    public Bitmap mBitmap;
+    public Rect mRect;
 
-    DrawingAction(Bitmap bitmap, Rect rect){
+    public DrawingAction(Bitmap bitmap, Rect rect){
         mBitmap = bitmap;
         mRect = new Rect(rect);
     }
 
     //The size is needed so we do not get an OutOfMemoryError
-    int getSize() {
+    public int getSize() {
         return mBitmap.getAllocationByteCount();
     }
 
