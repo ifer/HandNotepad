@@ -10,6 +10,7 @@ import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 
@@ -18,6 +19,7 @@ import com.raed.drawingview.DrawingView;
 import com.raed.drawingview.brushes.BrushSettings;
 import com.raed.drawingview.brushes.Brushes;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.UUID;
@@ -63,7 +65,8 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 Bitmap bitmap = mDrawingView.exportDrawing();
-                exportImage(bitmap);
+                saveAsBase64(bitmap);
+//                exportImage(bitmap);
             }
         });
 
@@ -102,5 +105,36 @@ public class MainActivity extends AppCompatActivity {
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
         stream.flush();
         stream.close();
+    }
+
+    private void saveAsBase64 (Bitmap bitmap){
+        String b64text = bitmapToBase64(bitmap);
+
+        File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+        folder.mkdirs();
+        File b64File = new File(folder,   "note-01.b64");
+
+        try {
+            FileOutputStream stream = new FileOutputStream(b64File);
+            stream.write(b64text.getBytes());
+            stream.flush();
+            stream.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+//        MediaScannerConnection.scanFile(
+//                this,
+//                new String[]{},
+//                new String[]{"image/png"},
+//                null);
+//        sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(imageFile)));
+    }
+
+    private String bitmapToBase64(Bitmap bitmap) {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+        byte[] byteArray = byteArrayOutputStream .toByteArray();
+        return Base64.encodeToString(byteArray, Base64.DEFAULT);
     }
 }
