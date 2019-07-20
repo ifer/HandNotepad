@@ -166,6 +166,7 @@ public class DrawingView extends View{
             mDrawingPerformer.setPaintPerformListener(new MyDrawingPerformerListener());
         }
         mDrawingPerformer.setWidthAndHeight(mDrawingBitmap.getWidth(), mDrawingBitmap.getHeight());
+        invalidate();
         mCleared = false;
     }
 
