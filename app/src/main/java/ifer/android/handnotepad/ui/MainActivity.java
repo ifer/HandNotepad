@@ -75,25 +75,31 @@ public class MainActivity extends AppCompatActivity {
 //        }
 
 
-        findViewById(R.id.clear).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mDrawingView.clear();
-            }
-        });
-        findViewById(R.id.pen).setOnClickListener(new View.OnClickListener() {
+         findViewById(R.id.btnPen).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setBrushSelected (Brushes.PEN);
             }
         });
-        findViewById(R.id.eraser).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnEraser).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setBrushSelected (Brushes.ERASER);
             }
         });
-        findViewById(R.id.ok).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDrawingView.clear();
+            }
+        });
+        findViewById(R.id.btnRefresh).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                remoteLoadBase64 ();;
+            }
+        });
+        findViewById(R.id.btnSave).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){

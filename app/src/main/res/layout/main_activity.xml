@@ -32,34 +32,82 @@
         android:layout_weight="1"
         >
 
-        <Button
-            android:id="@+id/pen"
+        <ImageButton
+            android:id="@+id/btnPen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="@string/pen"
-            android:textAllCaps="false" />
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_gravity="left|center_vertical"
+            android:clickable="true"
+            android:background="@android:color/transparent"
+            android:layout_weight="5"
+            android:src="@drawable/pencil48"/>
 
-        <Button
-            android:id="@+id/eraser"
+        <ImageButton
+            android:id="@+id/btnEraser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/eraser"
-            android:textAllCaps="false" />
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_gravity="left|center_vertical"
+            android:clickable="false"
+            android:background="@android:color/transparent"
+            android:layout_weight="5"
+            android:src="@drawable/eraser48"/>
 
-        <Button
-            android:id="@+id/clear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/clear"
-            android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/ok"
+        <ImageButton
+            android:id="@+id/btnClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ok"
-            android:textAllCaps="false" />
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_gravity="left|center_vertical"
+            android:clickable="false"
+            android:background="@android:color/transparent"
+            android:layout_weight="5"
+            android:src="@drawable/clear48"/>
+
+
+        <ImageButton
+            android:id="@+id/btnRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_gravity="left|center_vertical"
+            android:clickable="false"
+            android:background="@android:color/transparent"
+            android:layout_weight="5"
+            android:src="@drawable/refresh48"/>
+
+        <ImageButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_gravity="left|center_vertical"
+            android:clickable="false"
+            android:background="@android:color/transparent"
+            android:layout_weight="5"
+            android:src="@drawable/save48"/>
 
     </LinearLayout>
 
