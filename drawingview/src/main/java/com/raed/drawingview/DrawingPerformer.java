@@ -120,7 +120,7 @@ public class DrawingPerformer {
 
     private Rect getDrawingBoundsRect() {
         int size = mSelectedBrush.getSizeForSafeCrop();
-        Log.d(TAG, "getDrawingBoundsRect: " + size);
+//Log.d(DrawingView.TAG, "getDrawingBoundsRect: " + size);
         int left = (int) (mDrawingBoundsRect.mMinX - size / 2);
         left = ( left > 0) ?  left : 0;
         int top = (int) (mDrawingBoundsRect.mMinY - size / 2);

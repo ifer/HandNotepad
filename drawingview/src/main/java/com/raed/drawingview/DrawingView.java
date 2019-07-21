@@ -27,7 +27,12 @@ import com.raed.drawingview.brushes.BrushSettings;
 import com.raed.drawingview.brushes.Brushes;
 
 
+
+
 public class DrawingView extends View{
+
+    public static boolean drawingChanged = false;
+    public static final String TAG = "DEBUG-HandNotepad";
 
     private static final float MAX_SCALE = 5f;
     private static final float MIN_SCALE = 0.1f;
@@ -98,7 +103,7 @@ public class DrawingView extends View{
     public DrawingView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mBrushes = new Brushes(context.getResources());
-//Log.d("DRAW", "initializing");
+//Log.d(TAG, "initializing");
         if (attrs != null)
             initializeAttributes(attrs);
     }
@@ -123,6 +128,8 @@ public class DrawingView extends View{
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+//Log.d(TAG, "drawing...") ;
+
         //prevent drawing in the padding
         canvas.clipRect(
                 getPaddingStart(),
@@ -143,8 +150,12 @@ public class DrawingView extends View{
         canvas.drawColor(mBGColor);
         if (mBGBitmap != null)
             canvas.drawBitmap(mBGBitmap, 0, 0, null);
-        if (mDrawingPerformer.isDrawing())//true if the user is touching the screen
+        if (mDrawingPerformer.isDrawing()) { //true if the user is touching the screen
             mDrawingPerformer.draw(canvas, mDrawingBitmap);
+            drawingChanged = true;
+Log.d(TAG, "drawing...") ;
+
+        }
         else
             canvas.drawBitmap(mDrawingBitmap,0, 0, null);
     }

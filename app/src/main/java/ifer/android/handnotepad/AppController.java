@@ -49,6 +49,7 @@ public class AppController extends Application {
     public static String appPassword;
 
     public static boolean connectionEstablished = false;
+
     /**
      * Get the instance of the Application
      *

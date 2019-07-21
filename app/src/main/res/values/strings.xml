@@ -5,4 +5,31 @@
     <string name="eraser">Γόμα</string>
     <string name="ok">ΟΚ</string>
 
+    <string name="saved">Αποθηκεύτηκε επιτυχώς</string>
+    <string name="error_save">Πρόβλημα στην αποθήκευση ή στην επικοινωνία με τον server </string>
+    <string name="error_server_not_running">Πρόβλημα στην επικοινωνία. Ίσως ο server δεν  λειτουργεί</string>
+    <string name="error_drawing_retrieval">Πρόβλημα στην ανεύρεση του σχεδίου ή την επικοινωνία με τον server </string>
+
+    <string name="popup_ok">ΟΚ</string>
+    <string name="popup_cancel">Άκυρο</string>
+    <string name="popup_accept">Αποδοχή</string>
+    <string name="popup_decline">Άρνηση</string>
+    <string name="popup_yes">Ναι</string>
+    <string name="popup_no">Όχι</string>
+    <string name="popup_title_warning">ΠΡΟΣΟΧΗ!</string>
+    <string name="popup_title_info">Ειδοποίηση</string>
+    <string name="popup_title_question">Ερώτηση</string>
+    <string name="popup_title_error">ΣΦΑΛΜΑ</string>
+
+    <string name="error_response">O server δεν ανταποκρίνεται!\nΕλέγξτε το URL στις ρυθμίσεις</string>
+    <string name="error_api">Υπάρχει πρόβλημα σύνδεσης με τον server. Λεπτομέρειες:\n</string>
+    <string name="warn_clear_refresh">Σίγουρα θέλετε να διαγραφεί το παρόν σχέδιο;</string>
+    <string name="warn_not_saved">Το σχέδιο έχει μεταβληθεί. Σίγουρα θέλετε να ακυρώσετε τις αλλαγές;</string>
+
+    <string name="warn_credentials_needed">Δεν έχουν οριστεί στοιχεία σύνδεσης.\nΠαρακαλώ συμπληρώστε τα στην οθόνη \'Ρυθμίσεις\'\n</string>
+    <string name="wrong_credentials">Η σύνδεση ήταν ανεπιτυχής.\nΠαρακαλώ ελέγξτε τα στοιχεία σύνδεσης στην οθόνη \'Ρυθμίσεις\'\n</string>
+    <string name="connection_error">Η σύνδεση ήταν ανεπιτυχής. Αιτία:\n</string>
+    <string name="connection_ok">Επιτυχής σύνδεση! Μπορείτε να αρχίσετε να χρησιμοποιείτε την εφαρμογή</string>
+
+
 </resources>

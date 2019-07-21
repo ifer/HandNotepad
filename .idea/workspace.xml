@@ -5,7 +5,7 @@
       <filter>
         <option name="logLevel" value="verbose" />
         <option name="logMessagePattern" value="" />
-        <option name="logTagPattern" value="DRAW" />
+        <option name="logTagPattern" value="HandNotepad" />
         <option name="name" value="Unnamed-0" />
         <option name="packageNamePattern" value="" />
         <option name="pid" value="" />
@@ -29,8 +29,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19dc543a-a0b7-4a40-9d7f-b26bbc9fd0c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/eraser.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/pencil.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
@@ -38,9 +41,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/AppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/AndroidUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/AndroidUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingPerformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingPerformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/sample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/sample.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,60 +80,142 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gradle" value="8" />
-          <entry key="java" value="44" />
+          <entry key="gradle" value="12" />
+          <entry key="java" value="53" />
           <entry key="png" value="1" />
           <entry key="properties" value="1" />
-          <entry key="xml" value="36" />
+          <entry key="xml" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="8" />
+          <entry key="Groovy" value="12" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="44" />
+          <entry key="JAVA" value="53" />
           <entry key="Properties" value="1" />
-          <entry key="XML" value="36" />
+          <entry key="XML" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
-          <entry key="gradle" value="4" />
-          <entry key="java" value="1980" />
-          <entry key="xml" value="405" />
+          <entry key="gradle" value="22" />
+          <entry key="java" value="2641" />
+          <entry key="xml" value="682" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="4" />
-          <entry key="JAVA" value="1980" />
+          <entry key="Groovy" value="22" />
+          <entry key="JAVA" value="2641" />
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="XML" value="405" />
+          <entry key="XML" value="682" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
+            <state relative-caret-position="153">
+              <caret line="266" column="41" selection-start-line="266" selection-start-column="41" selection-end-line="266" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2184#2235#0" expanded="true" />
+                <element signature="e#2949#3202#0" expanded="true" />
+                <element signature="e#3201#3202#0" expanded="true" />
+                <element signature="e#3572#3983#0" expanded="true" />
+                <element signature="e#3852#3890#0" expanded="true" />
+                <element signature="e#3982#3983#0" expanded="true" />
+                <element signature="e#4043#4455#0" expanded="true" />
+                <element signature="e#4324#4362#0" expanded="true" />
+                <element signature="e#4454#4455#0" expanded="true" />
+                <element signature="e#4512#5142#0" expanded="true" />
+                <element signature="e#5141#5142#0" expanded="true" />
+                <element signature="e#6107#6147#0" expanded="true" />
+                <element signature="e#6315#6360#0" expanded="true" />
+                <element signature="e#6544#6603#0" expanded="true" />
+                <element signature="e#7700#7758#0" expanded="true" />
+                <element signature="e#7951#8010#0" expanded="true" />
+                <element signature="e#10105#10139#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml">
-          <provider editor-type-id="android-designer2" />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/AppController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="93" column="37" lean-forward="true" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+            <state relative-caret-position="153">
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/AndroidUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1020">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4318#4369#0" expanded="true" />
+                <element signature="e#4479#4531#0" expanded="true" />
+                <element signature="e#4583#4634#0" expanded="true" />
+                <element signature="e#4745#4797#0" expanded="true" />
+                <element signature="e#4849#4900#0" expanded="true" />
+                <element signature="e#5287#5346#0" expanded="true" />
+                <element signature="e#5520#5580#0" expanded="true" />
+                <element signature="e#5758#5820#0" expanded="true" />
+                <element signature="e#5992#6051#0" expanded="true" />
+                <element signature="e#6231#6294#0" expanded="true" />
+                <element signature="e#11672#11673#0" expanded="true" />
+                <element signature="e#11737#11738#0" expanded="true" />
+                <element signature="e#12185#12186#0" expanded="true" />
+                <element signature="e#12251#12252#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="158" column="12" selection-start-line="158" selection-start-column="12" selection-end-line="158" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#9264#9265#0" expanded="true" />
+                <element signature="e#9301#9302#0" expanded="true" />
+                <element signature="e#10709#10710#0" expanded="true" />
+                <element signature="e#10740#10741#0" expanded="true" />
+                <element signature="e#12616#12617#0" expanded="true" />
+                <element signature="e#12647#12648#0" expanded="true" />
+                <element signature="e#12675#12676#0" expanded="true" />
+                <element signature="e#12706#12707#0" expanded="true" />
+                <element signature="e#14632#14633#0" expanded="true" />
+                <element signature="e#14682#14683#0" expanded="true" />
+                <element signature="e#15158#15159#0" expanded="true" />
+                <element signature="e#15191#15192#0" expanded="true" />
+                <element signature="e#15228#15229#0" expanded="true" />
+                <element signature="e#15260#15261#0" expanded="true" />
+                <element signature="e#15517#15518#0" expanded="true" />
+                <element signature="e#15560#15561#0" expanded="true" />
+                <element signature="e#15754#15755#0" expanded="true" />
+                <element signature="e#15797#15798#0" expanded="true" />
+                <element signature="e#15983#15984#0" expanded="true" />
+                <element signature="e#16018#16019#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="26" column="32" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -131,6 +226,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -155,6 +251,13 @@
       <find>DrawingPerformerListener</find>
       <find>initializeDrawingBitmap</find>
       <find>clear</find>
+      <find>error_server_not_running</find>
+      <find>utils</find>
+      <find>AndroidUtils</find>
+      <find>DrawingPerformer</find>
+      <find>AppController</find>
+      <find>TAG</find>
+      <find>Log</find>
       <find>Log.d</find>
     </findStrings>
     <dirStrings>
@@ -168,7 +271,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/brushes/Brushes.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/sample/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/brushes/BrushSettings.java" />
@@ -178,18 +280,23 @@
         <option value="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/ActionStack.java" />
         <option value="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingAction.java" />
         <option value="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/Utilities.java" />
-        <option value="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingPerformer.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/AndroidUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/ErrorUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/ApiClient.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/AppController.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/Image.java" />
-        <option value="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/ApiInterface.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/pencil.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/eraser.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/AndroidUtils.java" />
+        <option value="$PROJECT_DIR$/drawingview/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/AppController.java" />
+        <option value="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java" />
+        <option value="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingPerformer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -361,73 +468,6 @@
             <path>
               <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
               <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="handnotepad" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="handnotepad" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="handnotepad" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="drawingview" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -459,38 +499,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="drawingview" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="drawingview" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="drawingview" type="462c0819:PsiDirectoryNode" />
-              <item name="brushes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="drawingview" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="drawingview" type="462c0819:PsiDirectoryNode" />
-              <item name="brushes" type="462c0819:PsiDirectoryNode" />
-              <item name="androidpathbrushes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="drawingview" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="drawingview" type="462c0819:PsiDirectoryNode" />
-              <item name="brushes" type="462c0819:PsiDirectoryNode" />
-              <item name="stampbrushes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -509,7 +517,7 @@
     <property name="android.project.structure.last.selected" value="sample" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/dvpsoft/Android-SDK" />
-    <property name="device.picker.selection" value="Lenovo_A7-30_Tablet_API_19" />
+    <property name="device.picker.selection" value="IFER_Nexus_5X_API_27" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="options.searchVisible" value="true" />
@@ -524,6 +532,9 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ifer.android.handnotepad" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -569,6 +580,59 @@
     </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -890,21 +954,21 @@
       <window_info id="Build Variants" order="5" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.20021413" />
       <window_info id="Captures" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Logcat" order="0" weight="0.37278762" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="0" visible="true" weight="0.37278762" />
       <window_info anchor="bottom" id="TODO" order="1" sideWeight="0.49946466" weight="0.32964602" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.20022124" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32964602" />
       <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5005353" side_tool="true" weight="0.32964602" />
-      <window_info anchor="bottom" id="Build" order="6" sideWeight="0.49946466" visible="true" weight="0.28539824" />
+      <window_info anchor="bottom" id="Build" order="6" sideWeight="0.49946466" weight="0.28539824" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32964602" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.21460177" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.24889381" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Gradle" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
       <window_info anchor="right" x="0" y="0" width="428" height="851" id="Documentation" order="3" sideWeight="0.50125" side_tool="true" weight="0.32976446" />
-      <window_info active="true" anchor="right" id="Preview" order="4" sideWeight="0.49875" visible="true" weight="0.31156316" />
+      <window_info anchor="right" id="Preview" order="4" sideWeight="0.49875" weight="0.31156316" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Device File Explorer" order="6" side_tool="true" weight="0.32976446" />
     </layout>
@@ -920,9 +984,21 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java</url>
-          <line>319</line>
+          <line>330</line>
           <properties />
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/AndroidUtils.java</url>
+          <line>118</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingPerformer.java</url>
+          <line>123</line>
+          <properties />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -993,13 +1069,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/BrushView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-340">
@@ -1029,20 +1098,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradle.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/drawingview/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drawingview/build.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/sample/src/main/AndroidManifest.xml">
@@ -1074,16 +1134,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingPerformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1106,16 +1156,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/AndroidUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2026">
-          <caret line="327" selection-start-line="327" selection-end-line="327" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/ApiClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -1124,28 +1164,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2809#2810#0" expanded="true" />
             <element signature="e#2840#2841#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/AppController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3246#3247#0" expanded="true" />
-            <element signature="e#3277#3278#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="109" column="19" lean-forward="true" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1164,13 +1182,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/ErrorUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/ApiInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1181,28 +1192,181 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/pencil.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+        <state relative-caret-position="68">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/eraser.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
+        <state relative-caret-position="68">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/ErrorUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/GenericUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="93" column="37" lean-forward="true" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+        <state relative-caret-position="311">
+          <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drawingview/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/dvpsoft/Android-SDK/sources/android-28/android/content/ContextWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingPerformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="158" column="12" selection-start-line="158" selection-start-column="12" selection-end-line="158" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9264#9265#0" expanded="true" />
+            <element signature="e#9301#9302#0" expanded="true" />
+            <element signature="e#10709#10710#0" expanded="true" />
+            <element signature="e#10740#10741#0" expanded="true" />
+            <element signature="e#12616#12617#0" expanded="true" />
+            <element signature="e#12647#12648#0" expanded="true" />
+            <element signature="e#12675#12676#0" expanded="true" />
+            <element signature="e#12706#12707#0" expanded="true" />
+            <element signature="e#14632#14633#0" expanded="true" />
+            <element signature="e#14682#14683#0" expanded="true" />
+            <element signature="e#15158#15159#0" expanded="true" />
+            <element signature="e#15191#15192#0" expanded="true" />
+            <element signature="e#15228#15229#0" expanded="true" />
+            <element signature="e#15260#15261#0" expanded="true" />
+            <element signature="e#15517#15518#0" expanded="true" />
+            <element signature="e#15560#15561#0" expanded="true" />
+            <element signature="e#15754#15755#0" expanded="true" />
+            <element signature="e#15797#15798#0" expanded="true" />
+            <element signature="e#15983#15984#0" expanded="true" />
+            <element signature="e#16018#16019#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/AndroidUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1020">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4318#4369#0" expanded="true" />
+            <element signature="e#4479#4531#0" expanded="true" />
+            <element signature="e#4583#4634#0" expanded="true" />
+            <element signature="e#4745#4797#0" expanded="true" />
+            <element signature="e#4849#4900#0" expanded="true" />
+            <element signature="e#5287#5346#0" expanded="true" />
+            <element signature="e#5520#5580#0" expanded="true" />
+            <element signature="e#5758#5820#0" expanded="true" />
+            <element signature="e#5992#6051#0" expanded="true" />
+            <element signature="e#6231#6294#0" expanded="true" />
+            <element signature="e#11672#11673#0" expanded="true" />
+            <element signature="e#11737#11738#0" expanded="true" />
+            <element signature="e#12185#12186#0" expanded="true" />
+            <element signature="e#12251#12252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="266" column="41" selection-start-line="266" selection-start-column="41" selection-end-line="266" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2184#2235#0" expanded="true" />
+            <element signature="e#2949#3202#0" expanded="true" />
+            <element signature="e#3201#3202#0" expanded="true" />
+            <element signature="e#3572#3983#0" expanded="true" />
+            <element signature="e#3852#3890#0" expanded="true" />
+            <element signature="e#3982#3983#0" expanded="true" />
+            <element signature="e#4043#4455#0" expanded="true" />
+            <element signature="e#4324#4362#0" expanded="true" />
+            <element signature="e#4454#4455#0" expanded="true" />
+            <element signature="e#4512#5142#0" expanded="true" />
+            <element signature="e#5141#5142#0" expanded="true" />
+            <element signature="e#6107#6147#0" expanded="true" />
+            <element signature="e#6315#6360#0" expanded="true" />
+            <element signature="e#6544#6603#0" expanded="true" />
+            <element signature="e#7700#7758#0" expanded="true" />
+            <element signature="e#7951#8010#0" expanded="true" />
+            <element signature="e#10105#10139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

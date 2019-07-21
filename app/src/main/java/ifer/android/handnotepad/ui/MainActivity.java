@@ -1,16 +1,21 @@
 package ifer.android.handnotepad.ui;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 
 import com.raed.drawingview.DrawingView;
 import com.raed.drawingview.brushes.BrushSettings;
@@ -30,7 +35,8 @@ import ifer.android.handnotepad.R;
 import ifer.android.handnotepad.api.ApiClient;
 import ifer.android.handnotepad.api.ApiInterface;
 import ifer.android.handnotepad.api.Drawing;
-import ifer.android.handnotepad.util.AndroidUtils;
+import static ifer.android.handnotepad.util.AndroidUtils.*;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -40,20 +46,28 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_IMPORT_IMAGE = 10;
     private DrawingView mDrawingView;
     private ApiInterface apiInterface;
+    private ImageButton btnPen;
+    private ImageButton btnEraser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         setContentView(R.layout.main_activity);
 
         mDrawingView = findViewById(R.id.drawing_view);
+        btnPen = findViewById(R.id.btnPen);
+        btnPen.setSelected(true);
+        btnEraser = findViewById(R.id.btnEraser);
+        btnEraser.setSelected(false);
 
         try {
             AppController.apiService = ApiClient.createService(ApiInterface.class);
         } catch (Exception e) {
             e.printStackTrace();
-            AndroidUtils.showToastMessage(getApplicationContext(), "Connection problem " + " " + e.getLocalizedMessage());
+            showToastMessage(getApplicationContext(), getResources().getString(R.string.connection_error) + " " + e.getLocalizedMessage());
             return;
         }
 
@@ -75,28 +89,32 @@ public class MainActivity extends AppCompatActivity {
 //        }
 
 
-         findViewById(R.id.btnPen).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnPen).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setBrushSelected (Brushes.PEN);
+                view.setSelected(true);
+                btnEraser.setSelected(false);
             }
         });
         findViewById(R.id.btnEraser).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setBrushSelected (Brushes.ERASER);
+                view.setSelected(true);
+                btnPen.setSelected(false);
             }
         });
         findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mDrawingView.clear();
+                 showPopup(MainActivity.this,  Popup.WARNING,  getString(R.string.warn_clear_refresh),  new ClearPosAction(), new DoNothingAction());
             }
         });
         findViewById(R.id.btnRefresh).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                remoteLoadBase64 ();;
+                showPopup(MainActivity.this, Popup.WARNING, getString(R.string.warn_clear_refresh), new RefreshPosAction(), new DoNothingAction());
             }
         });
         findViewById(R.id.btnSave).setOnClickListener(new View.OnClickListener() {
@@ -108,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 Bitmap bitmap = mDrawingView.exportDrawing();
                 remoteSaveAsBase64(bitmap);
+
 //                exportImage(bitmap);
             }
         });
@@ -135,16 +154,17 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     String msg = response.body();
                     if (msg.equals("OK")) {
-//                        AndroidUtils.showToastMessage(getApplicationContext(), "Success!");
+                        showToastMessage(getApplicationContext(), getResources().getString(R.string.saved));
                     }
+                    DrawingView.drawingChanged = false;
                 } else {
-                    AndroidUtils.showToastMessage(getApplicationContext(), "Failed!");
+                    showToastMessage(getApplicationContext(), getResources().getString(R.string.error_save));
                 }
             }
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
-                AndroidUtils.showToastMessage(getApplicationContext(), "FAILED!");
+                showToastMessage(getApplicationContext(), getResources().getString(R.string.error_server_not_running));
             }
         });
     }
@@ -160,18 +180,18 @@ public class MainActivity extends AppCompatActivity {
                         byte[] decodedString = Base64.decode(base64drawing, Base64.DEFAULT);
                         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
                         mDrawingView.initializeDrawingFromBitmap(decodedByte);
-
-//                        AndroidUtils.showToastMessage(getApplicationContext(), "Success!");
+                        DrawingView.drawingChanged = false;
+//                        showToastMessage(getApplicationContext(), "Success!");
                     }
                 } else {
                     String e = response.errorBody().source().toString();
-                    AndroidUtils.showToastMessage(getApplicationContext(), "Failed! " + e);
+                    showToastMessage(getApplicationContext(), getResources().getString(R.string.error_drawing_retrieval) + " " + e);
                 }
             }
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
-                AndroidUtils.showToastMessage(getApplicationContext(), "FAILED!");
+               showToastMessage(getApplicationContext(), getResources().getString(R.string.error_server_not_running));
             }
         });
 
@@ -216,4 +236,56 @@ public class MainActivity extends AppCompatActivity {
         byte[] byteArray = byteArrayOutputStream .toByteArray();
         return Base64.encodeToString(byteArray, Base64.NO_WRAP); // NO_WRAP: do not insert newline characters
     }
+
+    class ClearPosAction implements DialogInterface.OnClickListener {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            mDrawingView.clear();
+            DrawingView.drawingChanged = false;
+        }
+    }
+
+    class DoNothingAction implements DialogInterface.OnClickListener {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+        }
+    }
+
+    class RefreshPosAction implements DialogInterface.OnClickListener {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            remoteLoadBase64 ();
+            DrawingView.drawingChanged = false;
+        }
+    }
+
+
+
+    @Override
+    public void onBackPressed() {
+//printLog("exit", "drawingChanged=" + DrawingView.drawingChanged);
+            if (DrawingView.drawingChanged){
+                 showPopup(this,  Popup.WARNING,  getString(R.string.warn_not_saved),  new ExitPosAction(), new DoNothingAction());
+            }
+            else {
+                if (Build.VERSION.SDK_INT >= 21)
+                    finishAndRemoveTask();
+                else
+                    finish();
+            }
+    }
+
+    class ExitPosAction implements DialogInterface.OnClickListener {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            if (Build.VERSION.SDK_INT >= 21)
+                finishAndRemoveTask();
+            else
+                finish();
+
+            System.exit(0);
+        }
+    }
+
+
 }
