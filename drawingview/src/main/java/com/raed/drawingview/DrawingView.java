@@ -29,10 +29,16 @@ import com.raed.drawingview.brushes.Brushes;
 
 
 
+
 public class DrawingView extends View{
 
     public static boolean drawingChanged = false;
     public static final String TAG = "DEBUG-HandNotepad";
+
+    //ifer (suitable for old tablet)
+    public static int MAX_WIDTH = 552;
+    public static int MAX_HEIGHT = 702;
+
 
     private static final float MAX_SCALE = 5f;
     private static final float MIN_SCALE = 0.1f;
@@ -117,6 +123,8 @@ public class DrawingView extends View{
             initializeDrawingBitmap(
                     (int) getWidthWithoutPadding(),
                     (int) getHeightWithoutPadding());
+//Log.d(TAG, "onSizeChanged");
+
         }else {//in most cases this means the setBackgroundImage has been called before the view gets its dimensions
             //call this method so mBGBitmap gets scaled and aligned in the center
             //this method should also call initializeDrawingBitmap
@@ -153,7 +161,7 @@ public class DrawingView extends View{
         if (mDrawingPerformer.isDrawing()) { //true if the user is touching the screen
             mDrawingPerformer.draw(canvas, mDrawingBitmap);
             drawingChanged = true;
-Log.d(TAG, "drawing...") ;
+//Log.d(TAG, "drawing...") ;
 
         }
         else
@@ -161,12 +169,6 @@ Log.d(TAG, "drawing...") ;
     }
 
     //ifer
-//    public void setImageOnCanvas (Bitmap bitmap){
-//        mBGBitmap = bitmap;
-//        mCanvas.drawBitmap(mBGBitmap, 0, 0, null);
-//        invalidate();
-//    }
-
     public void initializeDrawingFromBitmap(Bitmap bitmap) {
         mDrawingBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
         mCanvas = new Canvas(mDrawingBitmap);
@@ -175,6 +177,7 @@ Log.d(TAG, "drawing...") ;
         if (mDrawingPerformer == null){
             mDrawingPerformer = new DrawingPerformer(mBrushes);
             mDrawingPerformer.setPaintPerformListener(new MyDrawingPerformerListener());
+//            mDrawingPerformer.setmBGColor(mBGColor);
         }
         mDrawingPerformer.setWidthAndHeight(mDrawingBitmap.getWidth(), mDrawingBitmap.getHeight());
         invalidate();
@@ -289,6 +292,7 @@ Log.d(TAG, "drawing...") ;
             mScaleFactor = 1f;
             mDrawingTranslationX = mDrawingTranslationY = 0;
             initializeDrawingBitmap(((int) getWidthWithoutPadding()), (int) getHeightWithoutPadding());
+//Log.d(TAG,"setBackgroundImage");
         }else {
             scaleBGBitmapIfNeeded();
             alignDrawingInTheCenter();
@@ -343,7 +347,8 @@ Log.d(TAG, "drawing...") ;
             );
             mActionStack.addAction(drawingAction);
         }
-        mCanvas.drawColor(0, PorterDuff.Mode.CLEAR);
+//        mCanvas.drawColor(0, PorterDuff.Mode.CLEAR);
+        mCanvas.drawColor(0xFFFFFFFF);
         invalidate();
         mCleared = true;
         return true;
@@ -485,9 +490,13 @@ Log.d(TAG, "drawing...") ;
     protected void checkBounds(){
         int width = mDrawingBitmap.getWidth();
         int height = mDrawingBitmap.getHeight();
+
+
         
         int contentWidth = (int) (width * mScaleFactor);
         int contentHeight = (int) (height * mScaleFactor);
+//Log.d(TAG,"checkBounds width=" + width + ", height=" + height);
+//Log.d(TAG,"checkBounds contentWidth=" + contentWidth + ", contentHeight=" + contentHeight);
 
         float widthBound = getWidth()/6;
         float heightBound = getHeight()/6;
@@ -514,6 +523,13 @@ Log.d(TAG, "drawing...") ;
     }
 
     private void initializeDrawingBitmap(int w, int h) {
+//Log.d(TAG,"initializeDrawingBitmap w=" +w + ", h=" + h);
+
+        if (w > MAX_WIDTH)
+            w = MAX_WIDTH;
+        if (h > MAX_HEIGHT)
+            h = MAX_HEIGHT;
+
         mDrawingBitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
         mCanvas = new Canvas(mDrawingBitmap);
         if (mDrawingPerformer == null){
@@ -550,6 +566,9 @@ Log.d(TAG, "drawing...") ;
     private void scaleBGBitmapIfNeeded(){
         float canvasWidth = getWidthWithoutPadding();
         float canvasHeight = getHeightWithoutPadding();
+
+//Log.d(TAG,"scaleBGBitmapIfNeeded width=" + getWidthWithoutPadding() + ", height=" + getHeightWithoutPadding());
+//Log.d(TAG,"contentWidth=" + contentWidth + ", contentHeight=" + contentHeight);
         if (canvasWidth <= 0 || canvasHeight <= 0)
             return;
         float bitmapWidth = mBGBitmap.getWidth();

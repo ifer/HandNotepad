@@ -37,7 +37,8 @@ public class AppController extends Application {
     //must uncomment values on strings.xml
     private static String prodAPIdomain = "http://";
 //    private static String devAPIdomain = "http://192.168.1.11:8083";
-    private static String devAPIdomain = "http://10.0.2.2:3000";      //Localhost ip for the emulator
+    private static String devAPIdomain = "http://10.0.2.2:3000";      //Localhost (ergo) ip for the emulator
+//    private static String devAPIdomain = "http://192.168.1.2:3000";      //Localhost (ergo) for devices
 //    private static String devAPIdomain = "http://192.168.1.90:8083";
 
 

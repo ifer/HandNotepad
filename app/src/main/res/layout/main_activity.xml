@@ -7,21 +7,24 @@
     android:layout_width="fill_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="fill_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.MainActivity"
+    android:weightSum="10" >
+
 
     <com.raed.drawingview.DrawingView
         android:id="@+id/drawing_view"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:background="#ffffff"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/backbox"
         android:elevation="8dp"
         android:layout_weight="9"
         app:brush="pen"
         app:brush_color="#2187bb"
         app:brush_size="1"
         app:drawing_background_color="#ffffff"
-         />
+
+     />
 
     <LinearLayout
         android:id="@+id/btnPanel"

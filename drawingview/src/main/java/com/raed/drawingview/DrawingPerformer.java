@@ -43,6 +43,8 @@ public class DrawingPerformer {
 
     private Brushes mBrushes;
 
+
+
     public DrawingPerformer(Brushes brushes){
 
         mStampBrushRenderer = new StampBrushRenderer();
@@ -193,5 +195,7 @@ public class DrawingPerformer {
             mMinY = mMaxY = y;
         }
     }
+
+
 
 }

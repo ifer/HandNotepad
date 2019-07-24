@@ -12,8 +12,11 @@ public class Eraser extends PathBrush {
     public Eraser(int minSizePx, int maxSizePx) {
         super(minSizePx, maxSizePx);
 
-        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
-        mPaint.setColor(-1);
+        //ifer: use eraser as a white brush. Mode PorterDuff.Mode.CLEAR not working on Android API 19
+
+//        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+        mPaint.setColor(0xFFFFFFFF);
+        mPaint.setStrokeWidth(3);
 
     }
 

@@ -47,6 +47,9 @@ class BrushPreviewPerformer {
     private Brush mBrush;//the currently selected brush
     private StampBrush mStampBrush;//the currently selected stamp brush if any
 
+
+
+
     public interface PreviewCallbacks{
         void onPreviewReadyToBeDrawn();
     }
@@ -231,5 +234,7 @@ class BrushPreviewPerformer {
             return true;
         }
     });
+
+
 
 }
