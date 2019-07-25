@@ -29,7 +29,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19dc543a-a0b7-4a40-9d7f-b26bbc9fd0c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/backbox.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
@@ -40,16 +39,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/GenericUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/GenericUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/BrushPreviewPerformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/BrushPreviewPerformer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingPerformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingPerformer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/brushes/androidpathbrushes/Eraser.java" beforeDir="false" afterPath="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/brushes/androidpathbrushes/Eraser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drawingview/src/main/res/values/brush_sizes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/drawingview/src/main/res/values/brush_sizes.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,10 +74,10 @@
         <counts>
           <entry key="apk" value="1" />
           <entry key="gradle" value="13" />
-          <entry key="java" value="68" />
+          <entry key="java" value="74" />
           <entry key="png" value="1" />
           <entry key="properties" value="1" />
-          <entry key="xml" value="43" />
+          <entry key="xml" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -91,25 +85,25 @@
           <entry key="APK" value="1" />
           <entry key="Groovy" value="13" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="68" />
+          <entry key="JAVA" value="74" />
           <entry key="Properties" value="1" />
-          <entry key="XML" value="43" />
+          <entry key="XML" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
           <entry key="gradle" value="22" />
-          <entry key="java" value="3153" />
-          <entry key="xml" value="737" />
+          <entry key="java" value="3670" />
+          <entry key="xml" value="764" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="22" />
-          <entry key="JAVA" value="3153" />
+          <entry key="JAVA" value="3670" />
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="XML" value="737" />
+          <entry key="XML" value="764" />
         </counts>
       </usages-collector>
     </session>
@@ -119,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1632">
-              <caret line="110" column="111" selection-start-line="110" selection-start-column="111" selection-end-line="110" selection-end-column="111" />
+            <state relative-caret-position="171">
+              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,13 +125,59 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="345" column="24" lean-forward="true" selection-start-line="345" selection-start-column="24" selection-end-line="345" selection-end-column="24" />
+            <state relative-caret-position="323">
+              <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#14873#14874#0" expanded="true" />
-                <element signature="e#14923#14924#0" expanded="true" />
+                <element signature="e#11261#11262#0" expanded="true" />
+                <element signature="e#11298#11299#0" expanded="true" />
+                <element signature="e#12741#12742#0" expanded="true" />
+                <element signature="e#12772#12773#0" expanded="true" />
+                <element signature="e#14743#14744#0" expanded="true" />
+                <element signature="e#14774#14775#0" expanded="true" />
+                <element signature="e#14802#14803#0" expanded="true" />
+                <element signature="e#14833#14834#0" expanded="true" />
+                <element signature="e#16759#16760#0" expanded="true" />
+                <element signature="e#16809#16810#0" expanded="true" />
+                <element signature="e#17285#17286#0" expanded="true" />
+                <element signature="e#17318#17319#0" expanded="true" />
+                <element signature="e#17355#17356#0" expanded="true" />
+                <element signature="e#17387#17388#0" expanded="true" />
+                <element signature="e#17644#17645#0" expanded="true" />
+                <element signature="e#17687#17688#0" expanded="true" />
+                <element signature="e#17881#17882#0" expanded="true" />
+                <element signature="e#17924#17925#0" expanded="true" />
+                <element signature="e#18110#18111#0" expanded="true" />
+                <element signature="e#18145#18146#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/GenericUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="74" selection-start-line="74" selection-end-line="80" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/Utilities.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-391">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -152,34 +192,6 @@
                 <element signature="e#979#1039#0" expanded="true" />
                 <element signature="e#1539#1602#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drawingview/src/main/res/values/brush_sizes.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/backbox.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -208,14 +220,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>storeBitmap</find>
-      <find>REQUEST_CODE_IMPORT_IMAGE</find>
-      <find>backgr</find>
-      <find>initializeDrawing</find>
-      <find>Liste</find>
-      <find>DrawingPerformerListener</find>
-      <find>error_server_not_running</find>
-      <find>utils</find>
       <find>AndroidUtils</find>
       <find>DrawingPerformer</find>
       <find>AppController</find>
@@ -238,6 +242,14 @@
       <find>size</find>
       <find>ClearPosAction</find>
       <find>clear</find>
+      <find>zoom</find>
+      <find>enterZoomMode</find>
+      <find>setZoo</find>
+      <find>setScaleFactor</find>
+      <find>resize</find>
+      <find>scaleBGBitmapIfNeeded</find>
+      <find>alignDrawingInTheCenter</find>
+      <find>MAX_WIDTH</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/drawingview/src/main/java</dir>
@@ -284,6 +296,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/backbox.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/GenericUtils.java" />
         <option value="$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java" />
       </list>
     </option>
@@ -473,6 +486,33 @@
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="handnotepad" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="handnotepad" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HandNotepad" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -482,7 +522,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="drawable" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HandNotepad" type="b2602c69:ProjectViewProjectNode" />
@@ -587,7 +627,7 @@
     <property name="android.project.structure.last.selected" value="sample" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/dvpsoft/Android-SDK" />
-    <property name="device.picker.selection" value="IFER_Nexus_5X_API_27" />
+    <property name="device.picker.selection" value="Lenovo_A7-30_Tablet_API_19" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AlmanacDroidAS/key/iferdvp-key.keystore" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="options.searchVisible" value="true" />
@@ -1024,16 +1064,16 @@
       <window_info id="Build Variants" order="5" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.20021413" />
       <window_info id="Captures" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Logcat" order="0" weight="0.36836284" />
+      <window_info anchor="bottom" id="Logcat" order="0" sideWeight="0.49946466" visible="true" weight="0.38827434" />
       <window_info anchor="bottom" id="TODO" order="1" sideWeight="0.49946466" weight="0.32964602" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.20022124" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32964602" />
       <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50214136" side_tool="true" visible="true" weight="0.28539824" />
-      <window_info anchor="bottom" id="Build" order="6" sideWeight="0.49785867" visible="true" weight="0.28539824" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32964602" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5005353" side_tool="true" visible="true" weight="0.38827434" />
+      <window_info anchor="bottom" id="Build" order="6" sideWeight="0.49785867" weight="0.28539824" />
+      <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49946466" weight="0.6924779" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.24889381" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49946466" weight="0.31969026" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Gradle" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -1133,13 +1173,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/Utilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/ResponseMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1209,13 +1242,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/GenericUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1242,13 +1268,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk">
       <provider selected="true" editor-type-id="apk-viewer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/ActionStack.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1308,16 +1327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingPerformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2567">
-          <caret line="198" selection-start-line="198" selection-end-line="198" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -1370,10 +1379,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drawingview/src/main/res/values/brush_sizes.xml">
+    <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="136">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1384,11 +1393,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="-391">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingPerformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drawingview/src/main/res/values/brush_sizes.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -1404,10 +1429,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/GenericUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="74" selection-start-line="74" selection-end-line="80" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1632">
-          <caret line="110" column="111" selection-start-line="110" selection-start-column="111" selection-end-line="110" selection-end-column="111" />
+        <state relative-caret-position="171">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1416,12 +1456,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/drawingview/src/main/java/com/raed/drawingview/DrawingView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="345" column="24" lean-forward="true" selection-start-line="345" selection-start-column="24" selection-end-line="345" selection-end-column="24" />
+        <state relative-caret-position="323">
+          <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#14873#14874#0" expanded="true" />
-            <element signature="e#14923#14924#0" expanded="true" />
+            <element signature="e#11261#11262#0" expanded="true" />
+            <element signature="e#11298#11299#0" expanded="true" />
+            <element signature="e#12741#12742#0" expanded="true" />
+            <element signature="e#12772#12773#0" expanded="true" />
+            <element signature="e#14743#14744#0" expanded="true" />
+            <element signature="e#14774#14775#0" expanded="true" />
+            <element signature="e#14802#14803#0" expanded="true" />
+            <element signature="e#14833#14834#0" expanded="true" />
+            <element signature="e#16759#16760#0" expanded="true" />
+            <element signature="e#16809#16810#0" expanded="true" />
+            <element signature="e#17285#17286#0" expanded="true" />
+            <element signature="e#17318#17319#0" expanded="true" />
+            <element signature="e#17355#17356#0" expanded="true" />
+            <element signature="e#17387#17388#0" expanded="true" />
+            <element signature="e#17644#17645#0" expanded="true" />
+            <element signature="e#17687#17688#0" expanded="true" />
+            <element signature="e#17881#17882#0" expanded="true" />
+            <element signature="e#17924#17925#0" expanded="true" />
+            <element signature="e#18110#18111#0" expanded="true" />
+            <element signature="e#18145#18146#0" expanded="true" />
           </folding>
         </state>
       </provider>

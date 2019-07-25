@@ -3,6 +3,7 @@ package com.raed.drawingview;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -109,7 +110,9 @@ public class DrawingView extends View{
     public DrawingView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mBrushes = new Brushes(context.getResources());
-//Log.d(TAG, "initializing");
+Log.d(TAG, "initializing");
+Log.d(TAG,"Screen width=" +  getScreenWidth() + ", Screen height=" + getScreenHeight());
+
         if (attrs != null)
             initializeAttributes(attrs);
     }
@@ -171,7 +174,12 @@ public class DrawingView extends View{
     //ifer
     public void initializeDrawingFromBitmap(Bitmap bitmap) {
         mDrawingBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
+
+        scaleDrawingBitmapIfNeeded();
+//        alignDrawingInTheCenter();
+
         mCanvas = new Canvas(mDrawingBitmap);
+
         int w = ((int) getWidthWithoutPadding());
         int h = ((int) getHeightWithoutPadding());
         if (mDrawingPerformer == null){
@@ -182,6 +190,43 @@ public class DrawingView extends View{
         mDrawingPerformer.setWidthAndHeight(mDrawingBitmap.getWidth(), mDrawingBitmap.getHeight());
         invalidate();
         mCleared = false;
+    }
+
+    //ifer
+    private void scaleDrawingBitmapIfNeeded(){
+        float canvasWidth = getWidthWithoutPadding();
+        float canvasHeight = getHeightWithoutPadding();
+
+//Log.d(TAG,"scaleDrawingBitmapIfNeeded canvas width=" + canvasWidth + ", canvas height=" + canvasHeight);
+//Log.d(TAG,"contentWidth=" + contentWidth + ", contentHeight=" + contentHeight);
+        if (canvasWidth <= 0 || canvasHeight <= 0)
+            return;
+        float bitmapWidth = mDrawingBitmap.getWidth();
+        float bitmapHeight = mDrawingBitmap.getHeight();
+
+//Log.d(TAG,"scaleDrawingBitmapIfNeeded Bitmap width=" + bitmapWidth + ", Bitmap height=" + bitmapHeight);
+
+
+        float scaleFactor = 1;
+        //if the bitmap is smaller than the view -> find a scale factor to scale it down
+        if (bitmapWidth > canvasWidth && bitmapHeight > canvasHeight) {
+            scaleFactor = Math.min(canvasHeight/bitmapHeight, canvasWidth/bitmapWidth);
+// Log.d (TAG, "(1) scaleFactor=" + scaleFactor);
+        } else if (bitmapWidth > canvasWidth && bitmapHeight < canvasHeight) {
+            scaleFactor = canvasWidth / bitmapWidth;
+//Log.d(TAG, "(2) scaleFactor=" + scaleFactor);
+        }
+        else if (bitmapWidth < canvasWidth && bitmapHeight > canvasHeight) {
+            scaleFactor = canvasHeight / bitmapHeight;
+//Log.d(TAG, "(3) scaleFactor=" + scaleFactor);
+        }
+        else if (bitmapWidth < canvasWidth && bitmapHeight < canvasHeight) {
+            scaleFactor = Math.min(canvasHeight/bitmapHeight, canvasWidth/bitmapWidth);
+//Log.d(TAG, "(4) scaleFactor=" + scaleFactor);
+        }
+
+        if (scaleFactor != 1)//if the bitmap is larger or smaller than the view, scale it down or up
+            mDrawingBitmap = Utilities.resizeBitmap(mDrawingBitmap, ((int) (mDrawingBitmap.getWidth() * scaleFactor)), (int) (mDrawingBitmap.getHeight() * scaleFactor));
     }
 
 
@@ -347,6 +392,7 @@ public class DrawingView extends View{
             );
             mActionStack.addAction(drawingAction);
         }
+        //ifer: Mode.CLEAR does not work with API 19.
 //        mCanvas.drawColor(0, PorterDuff.Mode.CLEAR);
         mCanvas.drawColor(0xFFFFFFFF);
         invalidate();
@@ -525,10 +571,10 @@ public class DrawingView extends View{
     private void initializeDrawingBitmap(int w, int h) {
 //Log.d(TAG,"initializeDrawingBitmap w=" +w + ", h=" + h);
 
-        if (w > MAX_WIDTH)
-            w = MAX_WIDTH;
-        if (h > MAX_HEIGHT)
-            h = MAX_HEIGHT;
+//        if (w > MAX_WIDTH)
+//            w = MAX_WIDTH;
+//        if (h > MAX_HEIGHT)
+//            h = MAX_HEIGHT;
 
         mDrawingBitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
         mCanvas = new Canvas(mDrawingBitmap);
@@ -650,5 +696,13 @@ public class DrawingView extends View{
             DrawingAction action = new DrawingAction(bitmap, rect);
             mActionStack.addAction(action);
         }
+    }
+
+    public static int getScreenWidth() {
+        return Resources.getSystem().getDisplayMetrics().widthPixels;
+    }
+
+    public static int getScreenHeight() {
+        return Resources.getSystem().getDisplayMetrics().heightPixels;
     }
 }

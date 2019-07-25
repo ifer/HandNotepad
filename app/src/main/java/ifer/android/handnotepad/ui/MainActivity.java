@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         setContentView(R.layout.main_activity);
 
         mDrawingView = findViewById(R.id.drawing_view);
@@ -73,7 +72,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         remoteLoadBase64 ();
-//        String b64text = null;
+
+        //it's OK for viewing zoomed drawing, but cannot paint on zoomed!
+//        mDrawingView.setScaleFactor((float)1.65);
+
+
+        //        String b64text = null;
 //        try {
 //            b64text = loadBase64File();
 //        }

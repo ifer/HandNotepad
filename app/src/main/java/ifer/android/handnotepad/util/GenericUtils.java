@@ -1,5 +1,9 @@
 package ifer.android.handnotepad.util;
 
+import android.content.Context;
+import android.content.res.Resources;
+import android.util.DisplayMetrics;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
@@ -68,4 +72,11 @@ public class GenericUtils {
 
     }
 
+    public static int getScreenWidth() {
+        return Resources.getSystem().getDisplayMetrics().widthPixels;
+    }
+
+    public static int getScreenHeight() {
+        return Resources.getSystem().getDisplayMetrics().heightPixels;
+    }
 }
