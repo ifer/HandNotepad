@@ -110,8 +110,8 @@ public class DrawingView extends View{
     public DrawingView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mBrushes = new Brushes(context.getResources());
-Log.d(TAG, "initializing");
-Log.d(TAG,"Screen width=" +  getScreenWidth() + ", Screen height=" + getScreenHeight());
+//Log.d(TAG, "initializing");
+//Log.d(TAG,"Screen width=" +  getScreenWidth() + ", Screen height=" + getScreenHeight());
 
         if (attrs != null)
             initializeAttributes(attrs);
