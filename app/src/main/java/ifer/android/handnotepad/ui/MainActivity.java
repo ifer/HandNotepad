@@ -2,27 +2,28 @@ package ifer.android.handnotepad.ui;
 
 import android.Manifest;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Environment;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Base64;
-import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
 import com.raed.drawingview.DrawingView;
 import com.raed.drawingview.brushes.BrushSettings;
 import com.raed.drawingview.brushes.Brushes;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -41,7 +42,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final int REQUEST_CODE_IMPORT_IMAGE = 10;
     private DrawingView mDrawingView;
@@ -54,13 +55,29 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.main_activity);
+        setContentView(R.layout.activity_main);
 
         mDrawingView = findViewById(R.id.drawing_view);
         btnPen = findViewById(R.id.btnPen);
         btnPen.setSelected(true);
         btnEraser = findViewById(R.id.btnEraser);
         btnEraser.setSelected(false);
+
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+
 
         try {
             AppController.apiService = ApiClient.createService(ApiInterface.class);
@@ -70,27 +87,8 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-
         remoteLoadBase64 ();
 
-        //it's OK for viewing zoomed drawing, but cannot paint on zoomed!
-//        mDrawingView.setScaleFactor((float)1.65);
-
-
-        //        String b64text = null;
-//        try {
-//            b64text = loadBase64File();
-//        }
-//        catch (IOException e){
-//            Log.d("DRAW", "base64 read error: " + e.getLocalizedMessage());
-//        }
-//
-//
-//        if (b64text != null && !(b64text.trim().length() == 0)){
-//            byte[] decodedString = Base64.decode(b64text, Base64.DEFAULT);
-//            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-//            mDrawingView.initializeDrawingFromBitmap(decodedByte);
-//        }
 
 
         findViewById(R.id.btnPen).setOnClickListener(new View.OnClickListener() {
@@ -150,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
     public void remoteSaveAsBase64 (Bitmap bitmap){
         String b64text = bitmapToBase64(bitmap);
         Drawing drawing = new Drawing(b64text);
+//Log.d("DRAW", "size=" + b64text.length());
 
         Call<String> call =  AppController.apiService.saveImage(drawing);
         call.enqueue(new Callback<String>() {
@@ -240,6 +239,29 @@ public class MainActivity extends AppCompatActivity {
         byte[] byteArray = byteArrayOutputStream .toByteArray();
         return Base64.encodeToString(byteArray, Base64.NO_WRAP); // NO_WRAP: do not insert newline characters
     }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_settings) {
+//            Intent wc = new Intent(this, SettingsActivity.class);
+//            startActivity(wc);
+        }
+        else if (id == R.id.nav_check_connection) {
+//            testConnection(this, true);
+        }
+        else if (id == R.id.nav_about) {
+//            showAbout ();
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
 
     class ClearPosAction implements DialogInterface.OnClickListener {
         @Override

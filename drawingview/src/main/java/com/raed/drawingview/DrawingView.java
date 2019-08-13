@@ -37,8 +37,8 @@ public class DrawingView extends View{
     public static final String TAG = "DEBUG-HandNotepad";
 
     //ifer (suitable for old tablet)
-    public static int MAX_WIDTH = 552;
-    public static int MAX_HEIGHT = 702;
+//    public static int MAX_WIDTH = 552;
+//    public static int MAX_HEIGHT = 702;
 
 
     private static final float MAX_SCALE = 5f;

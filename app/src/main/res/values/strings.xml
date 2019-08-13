@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">HandNotepad</string>
+    <string name="app_title">Χειρόγραφο Σημειωματάριο</string>
+     <string name="app_signature">Copywrite ifer 2019</string>
+    <string name="app_about">Copywrite ifer 2019</string>
+    <string name="text_about">\nΧειρόγραφο Σημειωματάριο\n\n
+έκδοση @version@\n\n
+Copyright ifer 2019\n
+</string>
+    <string name="version_uknown">[Άγνωστη]</string>
+
+    <string name="action_settings">Ρυθμίσεις</string>
+    <string name="action_about">Περί..</string>
+    <string name="action_check_connection">Έλεγχος σύνδεσης</string>
+
     <string name="clear">Καθάρισμα</string>
     <string name="pen">Μολύβι</string>
     <string name="eraser">Γόμα</string>
@@ -9,6 +22,10 @@
     <string name="error_save">Πρόβλημα στην αποθήκευση ή στην επικοινωνία με τον server </string>
     <string name="error_server_not_running">Πρόβλημα στην επικοινωνία. Ίσως ο server δεν  λειτουργεί</string>
     <string name="error_drawing_retrieval">Πρόβλημα στην ανεύρεση του σχεδίου ή την επικοινωνία με τον server </string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
 
     <string name="popup_ok">ΟΚ</string>
     <string name="popup_cancel">Άκυρο</string>
