@@ -17,5 +17,7 @@ public interface ApiInterface {
     @POST("/saveimage")
     Call<String> saveImage(@Body Drawing img );
 
+    @GET("/connection_alive")
+    Call<String> testConnection ();
 
 }

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_settings">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:paddingLeft="@dimen/form_horizontal_padding"
+        android:paddingRight="@dimen/form_horizontal_padding">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:layout_marginLeft="@dimen/form_horizontal_margin"
+            android:gravity="right"
+            android:text="@string/pref_server"
+            />
+
+        <EditText
+            android:id="@+id/pref_server"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/form_horizontal_margin"
+            android:layout_weight="0.7"
+            android:textColor="@color/black"
+            android:textSize="@dimen/elementTextValueSize" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:paddingLeft="@dimen/form_horizontal_padding"
+        android:paddingRight="@dimen/form_horizontal_padding">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:layout_marginLeft="@dimen/form_horizontal_margin"
+            android:gravity="right"
+            android:text="@string/pref_autorefresh"
+            />
+
+        <CheckBox
+            android:id="@+id/prefAutoRefresh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

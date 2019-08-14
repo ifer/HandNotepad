@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/pref_categ_server"
+        android:key="pref_categ_server_key">
+
+        <EditTextPreference android:title="@string/pref_server"
+            android:key="pref_server_key"
+            android:defaultValue="http://192.168.1.2:3000"
+           />
+
+
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/pref_categ_operation"
+        android:key="pref_categ_server_key"
+        >
+
+        <CheckBoxPreference android:title="@string/pref_autorefresh"
+            android:key="pref_autorefresh_key"
+            android:defaultValue="false"
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

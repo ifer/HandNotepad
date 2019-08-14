@@ -1,8 +1,10 @@
 package ifer.android.handnotepad.ui;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -37,13 +39,18 @@ import ifer.android.handnotepad.api.ApiClient;
 import ifer.android.handnotepad.api.ApiInterface;
 import ifer.android.handnotepad.api.Drawing;
 import static ifer.android.handnotepad.util.AndroidUtils.*;
+import static ifer.android.handnotepad.util.GenericUtils.isEmptyOrNull;
 
+import ifer.android.handnotepad.api.ResponseMessage;
+import ifer.android.handnotepad.util.AndroidUtils;
+import ifer.android.handnotepad.util.Constants;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
+    private Context context;
+    private final String VERSION_PATTERN = "@version@";
     private static final int REQUEST_CODE_IMPORT_IMAGE = 10;
     private DrawingView mDrawingView;
     private ApiInterface apiInterface;
@@ -54,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        context = this;
 
         setContentView(R.layout.activity_main);
 
@@ -77,17 +86,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        if (AppController.connectionEstablished == false)
+            setupConnection(getApplicationContext());
 
-
-        try {
-            AppController.apiService = ApiClient.createService(ApiInterface.class);
-        } catch (Exception e) {
-            e.printStackTrace();
-            showToastMessage(getApplicationContext(), getResources().getString(R.string.connection_error) + " " + e.getLocalizedMessage());
-            return;
-        }
-
-        remoteLoadBase64 ();
+        if (AppController.connectionEstablished == true)
+            remoteLoadBase64 ();
 
 
 
@@ -134,6 +137,72 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
     }
+
+    public static void setupConnection (Context context){
+        SharedPreferences settings = context.getSharedPreferences(Constants.SETTINGS_NAME, 0);
+
+        String serverURL = settings.getString(Constants.PrefServerKey, null);
+        AppController.setApiDomain(serverURL);
+
+
+        if (isEmptyOrNull(AppController.getApiDomain())) {
+//            AndroidUtils.showPopupInfo(context, context.getString(R.string.warn_credentials_needed));
+            showToastMessage(context, context.getString(R.string.warn_credentials_needed));
+            return;
+        }
+
+
+        try {
+            AppController.apiService = ApiClient.createService(ApiInterface.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+            showToastMessage(context, context.getString(R.string.connection_error) + " " + e.getLocalizedMessage());
+            return;
+        }
+
+        if (AppController.apiService != null) {
+            testConnection(context, false);
+        }
+        else {
+            showToastMessage(context, context.getString(R.string.wrong_credentials));
+        }
+    }
+
+    public static void testConnection(Context c, boolean showSuccessMessage) {
+
+        final Context context = c;
+        final boolean showSuccess = showSuccessMessage;
+
+        if (AppController.apiService == null){
+            showToastMessage(context, context.getString(R.string.wrong_credentials));
+            return;
+        }
+
+        Call<String> call = AppController.apiService.testConnection();
+
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                if (response.isSuccessful()) {
+                    String msg = response.body();
+                    if (msg.equals("OK")) {
+                        AppController.connectionEstablished = true;
+                        if(showSuccess)
+                            showToastMessage(context, context.getResources().getString(R.string.connection_ok));
+                    }
+                } else {
+                    String e = response.errorBody().source().toString();
+                    showToastMessage(context, context.getResources().getString(R.string.wrong_credentials) + "\n" + e);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                showToastMessage(context, context.getResources().getString(R.string.wrong_credentials));
+            }
+        });
+    }
+
 
     private void setBrushSelected(int brushID){
         BrushSettings settings = mDrawingView.getBrushSettings();
@@ -240,6 +309,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return Base64.encodeToString(byteArray, Base64.NO_WRAP); // NO_WRAP: do not insert newline characters
     }
 
+    public void showAbout (){
+        String version = null;
+        try {
+            version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+        }
+        catch (PackageManager.NameNotFoundException e){
+            printLog( e.getLocalizedMessage());
+        }
+        if (version == null)
+            version = getResources().getString(R.string.version_uknown);
+
+        String text = getResources().getString(R.string.text_about);
+        text = text.replace(VERSION_PATTERN, version);
+
+//        AndroidUtils.showPopupInfo(this, text);
+        AndroidUtils.showPopup(context, AndroidUtils.Popup.INFO, getString(R.string.action_about), text, null, null);
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -247,14 +334,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_settings) {
-//            Intent wc = new Intent(this, SettingsActivity.class);
-//            startActivity(wc);
+            Intent wc = new Intent(this, SettingsActivity.class);
+            startActivity(wc);
         }
         else if (id == R.id.nav_check_connection) {
-//            testConnection(this, true);
+            testConnection(this, true);
         }
         else if (id == R.id.nav_about) {
-//            showAbout ();
+            showAbout ();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

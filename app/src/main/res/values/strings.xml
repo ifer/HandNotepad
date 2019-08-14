@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">HandNotepad</string>
-    <string name="app_title">Χειρόγραφο Σημειωματάριο</string>
+    <string name="app_name">Σημειωματάριο χειρός</string>
+    <string name="app_title">Σημειωματάριο χειρός</string>
      <string name="app_signature">Copywrite ifer 2019</string>
     <string name="app_about">Copywrite ifer 2019</string>
-    <string name="text_about">\nΧειρόγραφο Σημειωματάριο\n\n
+    <string name="text_about">\nΣημειωματάριο χειρός\n\n
 έκδοση @version@\n\n
 Copyright ifer 2019\n
 </string>
@@ -12,6 +12,9 @@ Copyright ifer 2019\n
     <string name="action_settings">Ρυθμίσεις</string>
     <string name="action_about">Περί..</string>
     <string name="action_check_connection">Έλεγχος σύνδεσης</string>
+    <string name="action_save">Αποθήκευση</string>
+    <string name="action_cancel">Άκυρο</string>
+
 
     <string name="clear">Καθάρισμα</string>
     <string name="pen">Μολύβι</string>
@@ -47,6 +50,13 @@ Copyright ifer 2019\n
     <string name="wrong_credentials">Η σύνδεση ήταν ανεπιτυχής.\nΠαρακαλώ ελέγξτε τα στοιχεία σύνδεσης στην οθόνη \'Ρυθμίσεις\'\n</string>
     <string name="connection_error">Η σύνδεση ήταν ανεπιτυχής. Αιτία:\n</string>
     <string name="connection_ok">Επιτυχής σύνδεση! Μπορείτε να αρχίσετε να χρησιμοποιείτε την εφαρμογή</string>
+
+    <string name="pref_server">Server URL</string>
+    <string name="pref_autorefresh">Αυτόματη ενημέρωση</string>
+    <string name="pref_categ_server">Σύνδεση</string>
+    <string name="pref_categ_operation">Λειτουργία</string>
+
+    <string name="error_empty_setting">Όλα τα πεδία πρέπει να συμπληρωθούν!</string>
 
 
 </resources>
