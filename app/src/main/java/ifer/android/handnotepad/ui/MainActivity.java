@@ -89,8 +89,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (AppController.connectionEstablished == false)
             setupConnection(getApplicationContext());
 
-        if (AppController.connectionEstablished == true)
-            remoteLoadBase64 ();
+        remoteLoadBase64 ();
 
 
 
