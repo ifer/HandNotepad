@@ -19,6 +19,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -44,6 +45,7 @@ import static ifer.android.handnotepad.util.GenericUtils.isEmptyOrNull;
 import ifer.android.handnotepad.api.ResponseMessage;
 import ifer.android.handnotepad.util.AndroidUtils;
 import ifer.android.handnotepad.util.Constants;
+import ifer.android.handnotepad.util.LockingUtils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ImageButton btnPen;
     private ImageButton btnEraser;
 
+    public static boolean lockGranted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -218,6 +221,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Drawing drawing = new Drawing(b64text);
 //Log.d("DRAW", "size=" + b64text.length());
 
+        LockingUtils.releaseLock(getApplicationContext());
+
         Call<String> call =  AppController.apiService.saveImage(drawing);
         call.enqueue(new Callback<String>() {
             @Override
@@ -227,7 +232,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     if (msg.equals("OK")) {
                         showToastMessage(getApplicationContext(), getResources().getString(R.string.saved));
                     }
+
                     DrawingView.drawingChanged = false;
+//                    LockingUtils.releaseLock(getApplicationContext());
                 } else {
                     showToastMessage(getApplicationContext(), getResources().getString(R.string.error_save));
                 }
@@ -241,6 +248,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void remoteLoadBase64 () {
+        if ( AppController.apiService == null)
+            return;
         Call<String> call =  AppController.apiService.readImage();
         call.enqueue(new Callback<String>() {
             @Override

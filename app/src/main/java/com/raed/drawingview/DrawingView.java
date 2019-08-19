@@ -28,12 +28,19 @@ import com.raed.drawingview.brushes.Brushes;
 
 import ifer.android.handnotepad.AppController;
 import ifer.android.handnotepad.R;
+import ifer.android.handnotepad.api.ResponseMessage;
+import ifer.android.handnotepad.ui.MainActivity;
+import ifer.android.handnotepad.util.LockingUtils;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import static ifer.android.handnotepad.util.AndroidUtils.showToastMessage;
 
 
 public class DrawingView extends View{
 
     public static boolean drawingChanged = false;
-    public static final String TAG = "DEBUG-HandNotepad";
+    public static final String TAG = "DRAW";
 
     //ifer (suitable for old tablet)
 //    public static int MAX_WIDTH = 552;
@@ -139,7 +146,25 @@ public class DrawingView extends View{
         super.onDraw(canvas);
 
 //Log.d(TAG, "drawing...") ;
-//        Call<String> call =  AppController.apiService.saveImage(drawing);
+//        Call<ResponseMessage> call =  AppController.apiService.requireLock();
+//        call.enqueue(new Callback<ResponseMessage>() {
+//            @Override
+//            public void onResponse(Call<ResponseMessage> call, Response<ResponseMessage> response) {
+//                if (response.isSuccessful()) {
+//                    ResponseMessage msg = response.body();
+//                    if (msg.getStatus() != 1 ) {
+//                        showToastMessage(getContext(), msg.getMessage());
+//                    }
+//                } else {
+//                    showToastMessage(getContext(), getResources().getString(R.string.error_server_not_running));
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ResponseMessage> call, Throwable t) {
+//                showToastMessage(getContext(), getResources().getString(R.string.error_server_not_running));
+//            }
+//        });
 
         //prevent drawing in the padding
         canvas.clipRect(
@@ -164,7 +189,9 @@ public class DrawingView extends View{
         if (mDrawingPerformer.isDrawing()) { //true if the user is touching the screen
             mDrawingPerformer.draw(canvas, mDrawingBitmap);
             drawingChanged = true;
-//Log.d(TAG, "drawing...") ;
+Log.d(TAG, "[DrawingView] MainActivity.lockGranted = " + MainActivity.lockGranted) ;
+            if (MainActivity.lockGranted == false)
+                LockingUtils.requireLock(getContext());
 
         }
         else

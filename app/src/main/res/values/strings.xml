@@ -58,5 +58,9 @@ Copyright ifer 2019\n
 
     <string name="error_empty_setting">Όλα τα πεδία πρέπει να συμπληρωθούν!</string>
 
+    <string name="error_release_lock">Άγνωστο σφάλμα στην άρση του κλειδώματος!</string>
+    <string name="error_resource_locked">Κάποιος γράφει στο σημειωματάριο αυτή τη στιγμή!\nΠεριμένετε μερικά λεπτά πριν ξαναπροσπαθήσετε</string>
+
+
 
 </resources>
