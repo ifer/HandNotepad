@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HandNotepad.iml" filepath="$PROJECT_DIR$/HandNotepad.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/drawingview/drawingview.iml" filepath="$PROJECT_DIR$/drawingview/drawingview.iml" />
     </modules>
   </component>
 </project>

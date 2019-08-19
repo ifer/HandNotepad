@@ -1,6 +1,0 @@
-TO DO
-----
-- External settings: port, imgdir
-- Logfile
-- Error messages
-- Avoid conflicts

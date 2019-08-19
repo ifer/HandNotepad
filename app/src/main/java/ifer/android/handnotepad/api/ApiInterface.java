@@ -20,4 +20,9 @@ public interface ApiInterface {
     @GET("/connection_alive")
     Call<String> testConnection ();
 
+    @GET("/require_lock")
+    Call <ResponseMessage> requireLock();
+
+    @GET("/release_lock")
+    Call <String> releaseLock();
 }

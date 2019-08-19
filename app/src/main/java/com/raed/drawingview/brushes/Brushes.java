@@ -4,12 +4,14 @@ package com.raed.drawingview.brushes;
 import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 
-import com.raed.drawingview.R;
+
 import com.raed.drawingview.brushes.androidpathbrushes.Eraser;
 import com.raed.drawingview.brushes.androidpathbrushes.Pen;
 import com.raed.drawingview.brushes.stampbrushes.BitmapBrush;
 import com.raed.drawingview.brushes.stampbrushes.Calligraphy;
 import com.raed.drawingview.brushes.stampbrushes.RandRotBitmapBrush;
+
+import ifer.android.handnotepad.R;
 
 public class Brushes {
 

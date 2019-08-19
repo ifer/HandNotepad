@@ -22,13 +22,12 @@ import android.view.View;
 import com.raed.drawingview.ActionStack;
 import com.raed.drawingview.DrawingAction;
 import com.raed.drawingview.DrawingPerformer;
-import com.raed.drawingview.R;
 import com.raed.drawingview.Utilities;
 import com.raed.drawingview.brushes.BrushSettings;
 import com.raed.drawingview.brushes.Brushes;
 
-
-
+import ifer.android.handnotepad.AppController;
+import ifer.android.handnotepad.R;
 
 
 public class DrawingView extends View{
@@ -140,6 +139,7 @@ public class DrawingView extends View{
         super.onDraw(canvas);
 
 //Log.d(TAG, "drawing...") ;
+//        Call<String> call =  AppController.apiService.saveImage(drawing);
 
         //prevent drawing in the padding
         canvas.clipRect(
