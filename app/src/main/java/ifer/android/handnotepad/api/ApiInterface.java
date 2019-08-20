@@ -4,6 +4,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 /**
  * Created by ifer on 19/6/2017.
@@ -21,8 +22,8 @@ public interface ApiInterface {
     Call<String> testConnection ();
 
     @GET("/require_lock")
-    Call <ResponseMessage> requireLock();
+    Call <ResponseMessage> requireLock(@Query("ip_address") String ip_address);
 
     @GET("/release_lock")
-    Call <String> releaseLock();
+    Call <String> releaseLock(@Query("ip_address") String ip_address);
 }

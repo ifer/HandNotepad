@@ -29,7 +29,10 @@ Log.d("DRAW", "[LockingUtils] MainActivity.lockGranted = " + MainActivity.lockGr
         if (MainActivity.lockGranted == true)
             return;
 
-        Call<ResponseMessage> call =  AppController.apiService.requireLock();
+        String ipaddr = GenericUtils.getIPAddress(true);
+Log.d("DRAW", "ipaddr=" + ipaddr);
+
+        Call<ResponseMessage> call =  AppController.apiService.requireLock(ipaddr);
         call.enqueue(new Callback<ResponseMessage>() {
             @Override
             public void onResponse(Call<ResponseMessage> call, Response<ResponseMessage> response) {
@@ -57,8 +60,10 @@ Log.d("DRAW", "[LockingUtils] MainActivity.lockGranted = " + MainActivity.lockGr
     public static void releaseLock(final Context context){
         if ( AppController.apiService == null)
             return;
+        Log.d("DRAW", "releasing lock..");
+        String ipaddr = GenericUtils.getIPAddress(true);
 
-        Call<String> call =  AppController.apiService.releaseLock();
+        Call<String> call =  AppController.apiService.releaseLock(ipaddr);
         call.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
