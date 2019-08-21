@@ -40,9 +40,9 @@
   <component name="ChangeListManager">
     <list default="true" id="19dc543a-a0b7-4a40-9d7f-b26bbc9fd0c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/raed/drawingview/DrawingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/raed/drawingview/DrawingView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/ApiInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/ApiInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/GenericUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/GenericUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/LockingUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/LockingUtils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,14 +119,14 @@
           <entry key="dummy" value="15" />
           <entry key="gitignore" value="21" />
           <entry key="gradle" value="110" />
-          <entry key="java" value="5133" />
+          <entry key="java" value="5562" />
           <entry key="xml" value="1275" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="110" />
-          <entry key="JAVA" value="5133" />
+          <entry key="JAVA" value="5562" />
           <entry key="PLAIN_TEXT" value="36" />
           <entry key="XML" value="1275" />
         </counts>
@@ -154,13 +154,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="223" column="39" selection-start-line="223" selection-start-column="39" selection-end-line="223" selection-end-column="39" />
+            <state relative-caret-position="527">
+              <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6330#6368#0" expanded="true" />
+                <element signature="e#6656#6694#0" expanded="true" />
+                <element signature="e#11079#11119#0" expanded="true" />
+                <element signature="e#14953#15002#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -200,8 +204,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/raed/drawingview/DrawingView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="192" selection-start-line="191" selection-end-line="192" />
+            <state relative-caret-position="440">
+              <caret line="431" selection-start-line="431" selection-end-line="431" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -212,23 +216,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="374">
+              <caret line="60" column="36" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/LockingUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+            <state relative-caret-position="75">
+              <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1016#1065#0" expanded="true" />
                 <element signature="e#1161#1213#0" expanded="true" />
                 <element signature="e#1391#1443#0" expanded="true" />
-                <element signature="e#2019#2065#0" expanded="true" />
                 <element signature="e#2160#2212#0" expanded="true" />
                 <element signature="e#2466#2532#0" expanded="true" />
                 <element signature="e#2993#3172#0" expanded="true" />
@@ -241,8 +244,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/ApiInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="357">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -259,15 +262,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mDrawingPerformer</find>
-      <find>erase</find>
-      <find>Eraser</find>
-      <find>initializeDrawingFromBitmap</find>
       <find>color</find>
       <find>brush</find>
       <find>size</find>
-      <find>ClearPosAction</find>
-      <find>clear</find>
       <find>zoom</find>
       <find>enterZoomMode</find>
       <find>setZoo</find>
@@ -289,6 +286,12 @@
       <find>applicationId</find>
       <find>ResponseMe</find>
       <find>Locking</find>
+      <find>RefreshPosAction</find>
+      <find>requireLock</find>
+      <find>LockUti</find>
+      <find>ClearPosAction</find>
+      <find>Ukno</find>
+      <find>clear</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/drawingview/src/main/java</dir>
@@ -2779,12 +2782,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/brush_sizes.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/AppController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/raed/drawingview/DrawingView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/GenericUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/ApiInterface.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/LockingUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/raed/drawingview/DrawingView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -3466,16 +3469,16 @@
       <window_info id="Build Variants" order="5" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.1945629" />
       <window_info id="Captures" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Logcat" order="0" sideWeight="0.6620469" weight="0.76132596" />
+      <window_info anchor="bottom" id="Logcat" order="0" sideWeight="0.66151386" weight="0.37900552" />
       <window_info anchor="bottom" id="TODO" order="1" sideWeight="0.4968017" weight="0.32707182" />
       <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.49772727" weight="0.26306915" />
       <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.4968017" weight="0.32707182" />
       <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.1748401" side_tool="true" visible="true" weight="0.2994475" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.17537314" side_tool="true" visible="true" weight="0.2994475" />
       <window_info anchor="bottom" id="Build" order="6" sideWeight="0.75053304" weight="0.26629835" />
       <window_info anchor="bottom" id="Find" order="7" sideWeight="0.49848485" weight="0.26644182" />
       <window_info anchor="bottom" id="Android Profiler" order="8" sideWeight="0.49946696" weight="0.32928178" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" sideWeight="0.8251599" visible="true" weight="0.2994475" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" sideWeight="0.82462686" visible="true" weight="0.2994475" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Gradle" order="1" weight="0.32995737" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -3720,30 +3723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/ResponseMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/raed/drawingview/DrawingView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="192" selection-start-line="191" selection-end-line="192" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
@@ -3759,37 +3738,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/ResponseMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="223" column="39" selection-start-line="223" selection-start-column="39" selection-end-line="223" selection-end-column="39" />
+        <state relative-caret-position="102">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="60" column="36" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/ApiInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/LockingUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1016#1065#0" expanded="true" />
+            <element signature="e#1161#1213#0" expanded="true" />
+            <element signature="e#1391#1443#0" expanded="true" />
+            <element signature="e#2160#2212#0" expanded="true" />
+            <element signature="e#2466#2532#0" expanded="true" />
+            <element signature="e#2993#3172#0" expanded="true" />
+            <element signature="e#3171#3172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/raed/drawingview/DrawingView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="431" selection-start-line="431" selection-end-line="431" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/api/ApiInterface.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/ui/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ifer/android/handnotepad/util/LockingUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+        <state relative-caret-position="527">
+          <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1016#1065#0" expanded="true" />
-            <element signature="e#1161#1213#0" expanded="true" />
-            <element signature="e#1391#1443#0" expanded="true" />
-            <element signature="e#2019#2065#0" expanded="true" />
-            <element signature="e#2160#2212#0" expanded="true" />
-            <element signature="e#2466#2532#0" expanded="true" />
-            <element signature="e#2993#3172#0" expanded="true" />
-            <element signature="e#3171#3172#0" expanded="true" />
+            <element signature="e#6330#6368#0" expanded="true" />
+            <element signature="e#6656#6694#0" expanded="true" />
+            <element signature="e#11079#11119#0" expanded="true" />
+            <element signature="e#14953#15002#0" expanded="true" />
           </folding>
         </state>
       </provider>

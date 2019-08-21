@@ -25,5 +25,5 @@ public interface ApiInterface {
     Call <ResponseMessage> requireLock(@Query("ip_address") String ip_address);
 
     @GET("/release_lock")
-    Call <String> releaseLock(@Query("ip_address") String ip_address);
+    Call <ResponseMessage> releaseLock(@Query("ip_address") String ip_address);
 }

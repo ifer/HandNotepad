@@ -189,9 +189,9 @@ public class DrawingView extends View{
         if (mDrawingPerformer.isDrawing()) { //true if the user is touching the screen
             mDrawingPerformer.draw(canvas, mDrawingBitmap);
             drawingChanged = true;
-Log.d(TAG, "[DrawingView] MainActivity.lockGranted = " + MainActivity.lockGranted) ;
+//Log.d(TAG, "[DrawingView] MainActivity.lockGranted = " + MainActivity.lockGranted) ;
             if (MainActivity.lockGranted == false)
-                LockingUtils.requireLock(getContext());
+                LockingUtils.requireLock(getContext(), LockingUtils.ACTION_DRAW, this);
 
         }
         else
@@ -406,6 +406,9 @@ Log.d(TAG, "[DrawingView] MainActivity.lockGranted = " + MainActivity.lockGrante
     public boolean clear() {
         if (mCleared)
             return false;
+
+
+
         Rect rect = new Rect(
                 0,
                 0,
@@ -424,6 +427,9 @@ Log.d(TAG, "[DrawingView] MainActivity.lockGranted = " + MainActivity.lockGrante
         mCanvas.drawColor(0xFFFFFFFF);
         invalidate();
         mCleared = true;
+
+        drawingChanged = true;
+
         return true;
     }
 

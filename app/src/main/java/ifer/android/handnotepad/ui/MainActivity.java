@@ -51,7 +51,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private Context context;
+    protected Context context;
     private final String VERSION_PATTERN = "@version@";
     private static final int REQUEST_CODE_IMPORT_IMAGE = 10;
     private DrawingView mDrawingView;
@@ -89,13 +89,62 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        setupButtons();
+
         if (AppController.connectionEstablished == false)
             setupConnection(getApplicationContext());
 
         remoteLoadBase64 ();
 
 
+//
+//        findViewById(R.id.btnPen).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                setBrushSelected (Brushes.PEN);
+//                view.setSelected(true);
+//                btnEraser.setSelected(false);
+//            }
+//        });
+//        findViewById(R.id.btnEraser).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                setBrushSelected (Brushes.ERASER);
+//                view.setSelected(true);
+//                btnPen.setSelected(false);
+//            }
+//        });
+//        findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                 showPopup(MainActivity.this,  Popup.WARNING,  getString(R.string.warn_clear_refresh),  new ClearPosAction(), new DoNothingAction());
+//            }
+//        });
+//        findViewById(R.id.btnRefresh).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                showPopup(MainActivity.this, Popup.WARNING, getString(R.string.warn_clear_refresh), new RefreshPosAction(), new DoNothingAction());
+//            }
+//        });
+//        findViewById(R.id.btnSave).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (DrawingView.drawingChanged == false)
+//                    return;
+//                if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+//                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);//ignoring the request code
+//                    return;
+//                }
+//                Bitmap bitmap = mDrawingView.exportDrawing();
+//                remoteSaveAsBase64(bitmap);
+//
+////                exportImage(bitmap);
+//            }
+//        });
 
+    }
+
+    public void setupButtons(){
         findViewById(R.id.btnPen).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,7 +164,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                 showPopup(MainActivity.this,  Popup.WARNING,  getString(R.string.warn_clear_refresh),  new ClearPosAction(), new DoNothingAction());
+                showPopup(MainActivity.this,  Popup.WARNING,  getString(R.string.warn_clear_refresh),  new ClearPosAction(), new DoNothingAction());
             }
         });
         findViewById(R.id.btnRefresh).setOnClickListener(new View.OnClickListener() {
@@ -127,6 +176,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         findViewById(R.id.btnSave).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (DrawingView.drawingChanged == false)
+                    return;
                 if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
                     ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);//ignoring the request code
                     return;
@@ -137,7 +188,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //                exportImage(bitmap);
             }
         });
-
     }
 
     public static void setupConnection (Context context){
@@ -221,7 +271,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Drawing drawing = new Drawing(b64text);
 //Log.d("DRAW", "size=" + b64text.length());
 
-        LockingUtils.releaseLock(getApplicationContext());
 
         Call<String> call =  AppController.apiService.saveImage(drawing);
         call.enqueue(new Callback<String>() {
@@ -234,10 +283,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     }
 
                     DrawingView.drawingChanged = false;
-//                    LockingUtils.releaseLock(getApplicationContext());
                 } else {
                     showToastMessage(getApplicationContext(), getResources().getString(R.string.error_save));
                 }
+                LockingUtils.releaseLock(getApplicationContext());
             }
 
             @Override
@@ -361,8 +410,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     class ClearPosAction implements DialogInterface.OnClickListener {
         @Override
         public void onClick(DialogInterface dialog, int which) {
-            mDrawingView.clear();
-            DrawingView.drawingChanged = false;
+            if (MainActivity.lockGranted == false) {
+                LockingUtils.requireLock(MainActivity.this.context, LockingUtils.ACTION_CLEAR, mDrawingView); // Will be cleared by LockingUtils
+            }
+            else {
+                mDrawingView.clear();
+            }
         }
     }
 
