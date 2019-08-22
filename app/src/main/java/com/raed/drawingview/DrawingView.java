@@ -145,26 +145,7 @@ public class DrawingView extends View{
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-//Log.d(TAG, "drawing...") ;
-//        Call<ResponseMessage> call =  AppController.apiService.requireLock();
-//        call.enqueue(new Callback<ResponseMessage>() {
-//            @Override
-//            public void onResponse(Call<ResponseMessage> call, Response<ResponseMessage> response) {
-//                if (response.isSuccessful()) {
-//                    ResponseMessage msg = response.body();
-//                    if (msg.getStatus() != 1 ) {
-//                        showToastMessage(getContext(), msg.getMessage());
-//                    }
-//                } else {
-//                    showToastMessage(getContext(), getResources().getString(R.string.error_server_not_running));
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ResponseMessage> call, Throwable t) {
-//                showToastMessage(getContext(), getResources().getString(R.string.error_server_not_running));
-//            }
-//        });
+//Log.d(TAG, "1-drawing...") ;
 
         //prevent drawing in the padding
         canvas.clipRect(
@@ -187,6 +168,7 @@ public class DrawingView extends View{
         if (mBGBitmap != null)
             canvas.drawBitmap(mBGBitmap, 0, 0, null);
         if (mDrawingPerformer.isDrawing()) { //true if the user is touching the screen
+//Log.d(TAG, "2-drawing...") ;
             mDrawingPerformer.draw(canvas, mDrawingBitmap);
             drawingChanged = true;
 //Log.d(TAG, "[DrawingView] MainActivity.lockGranted = " + MainActivity.lockGranted) ;

@@ -97,51 +97,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         remoteLoadBase64 ();
 
 
-//
-//        findViewById(R.id.btnPen).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                setBrushSelected (Brushes.PEN);
-//                view.setSelected(true);
-//                btnEraser.setSelected(false);
-//            }
-//        });
-//        findViewById(R.id.btnEraser).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                setBrushSelected (Brushes.ERASER);
-//                view.setSelected(true);
-//                btnPen.setSelected(false);
-//            }
-//        });
-//        findViewById(R.id.btnClear).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                 showPopup(MainActivity.this,  Popup.WARNING,  getString(R.string.warn_clear_refresh),  new ClearPosAction(), new DoNothingAction());
-//            }
-//        });
-//        findViewById(R.id.btnRefresh).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                showPopup(MainActivity.this, Popup.WARNING, getString(R.string.warn_clear_refresh), new RefreshPosAction(), new DoNothingAction());
-//            }
-//        });
-//        findViewById(R.id.btnSave).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (DrawingView.drawingChanged == false)
-//                    return;
-//                if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
-//                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);//ignoring the request code
-//                    return;
-//                }
-//                Bitmap bitmap = mDrawingView.exportDrawing();
-//                remoteSaveAsBase64(bitmap);
-//
-////                exportImage(bitmap);
-//            }
-//        });
-
     }
 
     public void setupButtons(){
@@ -189,6 +144,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
     }
+
+    private void setBrushSelected(int brushID){
+        BrushSettings settings = mDrawingView.getBrushSettings();
+        settings.setSelectedBrush(brushID);
+//        Log.d("DRAW", "setBrushSelected: " + String.valueOf(brushID));
+
+        int sizeInPercentage = (int) (settings.getSelectedBrushSize() * 100);
+//        mSizeSeekBar.setProgress(sizeInPercentage);
+    }
+
 
     public static void setupConnection (Context context){
         SharedPreferences settings = context.getSharedPreferences(Constants.SETTINGS_NAME, 0);
@@ -256,14 +221,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-    private void setBrushSelected(int brushID){
-        BrushSettings settings = mDrawingView.getBrushSettings();
-        settings.setSelectedBrush(brushID);
-//        Log.d("DRAW", "setBrushSelected: " + String.valueOf(brushID));
-
-        int sizeInPercentage = (int) (settings.getSelectedBrushSize() * 100);
-//        mSizeSeekBar.setProgress(sizeInPercentage);
-    }
 
 
     public void remoteSaveAsBase64 (Bitmap bitmap){
@@ -291,7 +248,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
-                showToastMessage(getApplicationContext(), getResources().getString(R.string.error_server_not_running));
+                showToastMessage(getApplicationContext(), getResources().getString(R.string.error_server_not_running) + " (1)");
             }
         });
     }
@@ -320,7 +277,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
-               showToastMessage(getApplicationContext(), getResources().getString(R.string.error_server_not_running));
+               showToastMessage(getApplicationContext(), getResources().getString(R.string.error_server_not_running) + " (2)");
             }
         });
 

@@ -59,13 +59,13 @@ public class LockingUtils {
                         mainActivity.remoteLoadBase64();
                     }
                 } else {
-                    showToastMessage(context, context.getString(R.string.error_server_not_running));
+                    showToastMessage(context, context.getString(R.string.error_server_not_running) + " (3)");
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseMessage> call, Throwable t) {
-                showToastMessage(context, context.getString(R.string.error_server_not_running));
+                showToastMessage(context,  context.getString(R.string.error_server_not_running) + " (4)");
             }
         });
     }
@@ -90,13 +90,13 @@ public class LockingUtils {
                         showToastMessage(context, msg.getMessage());
                     }
                 } else {
-                    showToastMessage(context,context.getString(R.string.error_server_not_running));
+                    showToastMessage(context,  context.getString(R.string.error_server_not_running)+ " (5)");
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseMessage> call, Throwable t) {
-                showToastMessage(context, context.getString(R.string.error_server_not_running));
+                showToastMessage(context,  context.getString(R.string.error_server_not_running)+ " (6)");
             }
         });
     }
