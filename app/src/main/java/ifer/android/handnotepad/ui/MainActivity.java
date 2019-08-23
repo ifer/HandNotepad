@@ -19,7 +19,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -42,7 +41,6 @@ import ifer.android.handnotepad.api.Drawing;
 import static ifer.android.handnotepad.util.AndroidUtils.*;
 import static ifer.android.handnotepad.util.GenericUtils.isEmptyOrNull;
 
-import ifer.android.handnotepad.api.ResponseMessage;
 import ifer.android.handnotepad.util.AndroidUtils;
 import ifer.android.handnotepad.util.Constants;
 import ifer.android.handnotepad.util.LockingUtils;
@@ -59,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ImageButton btnPen;
     private ImageButton btnEraser;
 
-    public static boolean lockGranted = false;
+//    public static boolean lockGranted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -367,12 +365,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     class ClearPosAction implements DialogInterface.OnClickListener {
         @Override
         public void onClick(DialogInterface dialog, int which) {
-            if (MainActivity.lockGranted == false) {
                 LockingUtils.requireLock(MainActivity.this.context, LockingUtils.ACTION_CLEAR, mDrawingView); // Will be cleared by LockingUtils
-            }
-            else {
-                mDrawingView.clear();
-            }
         }
     }
 

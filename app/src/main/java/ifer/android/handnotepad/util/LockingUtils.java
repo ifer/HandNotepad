@@ -5,8 +5,12 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.os.Handler;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.raed.drawingview.DrawingView;
+
+import java.io.IOException;
+import java.net.SocketTimeoutException;
 
 import ifer.android.handnotepad.AppController;
 import ifer.android.handnotepad.R;
@@ -21,6 +25,7 @@ public class LockingUtils {
     public static int ACTION_DRAW=1;
     public static int ACTION_CLEAR=2;
 
+    public static boolean lockRequested = false;
 
     private DrawingView mDrawingView;
 
@@ -28,13 +33,18 @@ public class LockingUtils {
     private static long lockTimeout = 30000;
     private static Handler timeoutHandler = new Handler();
 
-    public static void requireLock(final Context context, final int action, final DrawingView drawingView){
+
+
+    public static void requireLock (final Context context, final int action, final DrawingView drawingView){
         if ( AppController.apiService == null)
             return;
-//Log.d("DRAW", "[LockingUtils] MainActivity.lockGranted = " + MainActivity.lockGranted) ;
 
-        if (MainActivity.lockGranted == true)
+
+        if (lockRequested == true)
             return;
+
+        lockRequested = true;
+
 
         String ipaddr = GenericUtils.getIPAddress(true);
 //Log.d("DRAW", "ipaddr=" + ipaddr);
@@ -48,8 +58,7 @@ public class LockingUtils {
                 if (response.isSuccessful()) {
                     ResponseMessage msg = response.body();
                     if (msg.getStatus() == 1 ){
-                        MainActivity.lockGranted = true;
-                        setLockTimeout(lockTimeout);
+//                        setLockTimeout(lockTimeout);
                         if (action == ACTION_CLEAR)
                             drawingView.clear();
                     }
@@ -58,17 +67,32 @@ public class LockingUtils {
                         //Lock request rejected, so reload image as it was
                         mainActivity.remoteLoadBase64();
                     }
+
                 } else {
                     showToastMessage(context, context.getString(R.string.error_server_not_running) + " (3)");
                 }
+                lockRequested = false;
             }
 
             @Override
             public void onFailure(Call<ResponseMessage> call, Throwable t) {
+                if (t instanceof IOException) {
+                    Log.d("DRAW","Network Error:" + t.getLocalizedMessage());
+                    if(t instanceof SocketTimeoutException){
+                        Log.d("DRAW", "Socket Time out");
+                    }
+                    // logging probably not necessary
+                }
+                else {
+                    Log.d("DRAW", "conversion issue! big problems :(");
+                    // todo log to some central bug tracking service
+                }
+                lockRequested = false;
                 showToastMessage(context,  context.getString(R.string.error_server_not_running) + " (4)");
             }
         });
     }
+
 
     public static void releaseLock(final Context context){
         if ( AppController.apiService == null)
@@ -83,7 +107,6 @@ public class LockingUtils {
                 if (response.isSuccessful()) {
                     ResponseMessage msg = response.body();
                     if (msg.getStatus() == 1 ) {
-                        MainActivity.lockGranted = false;
                         unsetLockTimeout();
                     }
                     else {
@@ -105,7 +128,6 @@ public class LockingUtils {
         timeoutHandler.postDelayed(
                 new Runnable() {
                     public void run() {
-                        MainActivity.lockGranted = false;
 //Log.d("DRAW", "lockGranted set to false");
                     }
                 }, millis);

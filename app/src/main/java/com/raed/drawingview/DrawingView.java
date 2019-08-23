@@ -172,7 +172,7 @@ public class DrawingView extends View{
             mDrawingPerformer.draw(canvas, mDrawingBitmap);
             drawingChanged = true;
 //Log.d(TAG, "[DrawingView] MainActivity.lockGranted = " + MainActivity.lockGranted) ;
-            if (MainActivity.lockGranted == false)
+//            if (LockingUtils.lockGranted == false)
                 LockingUtils.requireLock(getContext(), LockingUtils.ACTION_DRAW, this);
 
         }
