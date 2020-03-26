@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HandNotepad.iml" filepath="$PROJECT_DIR$/HandNotepad.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HandNotepad.iml" filepath="$PROJECT_DIR$/HandNotepad.iml" group="HandNotepad" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="HandNotepad/app" />
     </modules>
   </component>
 </project>
